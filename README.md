@@ -1,15 +1,14 @@
 
 # passerby1_'s website
 
-twitter@passerby1_'s website made by "[nicolas-van/bootstrap-4-github-pages](https://github.com/nicolas-van/bootstrap-4-github-pages)", Github Pages, and jekyll.
+twitter@passerby1_'s website made by "[nicolas-van/bootstrap-4-github-pages](https://github.com/nicolas-van/bootstrap-4-github-pages)", Github Pages, and jekyll.  
 "[BorisLouis/BorisLouis.github.io](https://github.com/BorisLouis/BorisLouis.github.io)", which also uses "bootstraps-4-github-pages" is used as a reference for making this website.
 
 
 
 ## License
 
-Distributing under MIT License.
-[See details for the license file.](./LICENSE.md)
+Distributing under MIT License. [See details for the license file.](./LICENSE.md)
 
 
 ## Boostrap 4 Github Pages

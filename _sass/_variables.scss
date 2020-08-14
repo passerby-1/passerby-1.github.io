@@ -42,8 +42,15 @@ $green:   #56CC9D !default;
 $teal:    #20c997 !default;
 $cyan:    #6CC3D5 !default;
 
-$primary:       #78C2AD !default;
-$secondary:     #F3969A !default;
+//$primary:       #78C2AD !default;
+$primary: #ADCF04 !default;
+//lime green from Sansha Sanyou(Three Leaves, Three Colors) logo's "SHA" and "YOU", did you notice that?
+
+//$secondary:     #F3969A !default;
+$secondary: #935C4A !default;
+
+//color of ODAGIRI Futaba's hair, did you know that?
+
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
@@ -65,7 +72,7 @@ $border-radius-sm:            .3rem !default;
 
 // Fonts
 
-$headings-font-family:        "Montserrat", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$headings-font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", Meiryo, sans-serif;
 $headings-color:              $gray-700 !default;
 
 // Tables
