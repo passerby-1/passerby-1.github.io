@@ -1,6 +1,6 @@
-baseURL = "http://example.org/"
+baseURL = "https://passerby1.dev/"
 DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, zh-hant
-languageCode = "en-us"
+languageCode = "ja-jp"
 title = "A Hugo Site"
 copyright = "This is a customized copyright."
 theme = "diary"
