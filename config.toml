@@ -1,4 +1,5 @@
 baseURL = "https://passerby1.dev/"
+publishDir = "docs"
 DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, zh-hant
 languageCode = "ja-jp"
 title = "A Hugo Site"
