@@ -1,4 +1,4 @@
-<?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>passerby1's website</title><link>https://passerby1.dev/</link><description>Recent content on passerby1's website</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>This is a customized copyright.</copyright><lastBuildDate>Sun, 18 Mar 2018 12:13:38 +0530</lastBuildDate><atom:link href="https://passerby1.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Typography - Test for features</title><link>https://passerby1.dev/posts/post-5/</link><pubDate>Sun, 18 Mar 2018 12:13:38 +0530</pubDate><guid>https://passerby1.dev/posts/post-5/</guid><description>passerby1's website https://passerby1.dev/posts/post-5/ -&lt;p>Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.&lt;/p>
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>passerby1's website</title><link>https://passerby1.dev/</link><description>Recent content on passerby1's website</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>passerby1</copyright><lastBuildDate>Sun, 18 Mar 2018 12:13:38 +0530</lastBuildDate><atom:link href="https://passerby1.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Typography - Test for features</title><link>https://passerby1.dev/posts/post-5/</link><pubDate>Sun, 18 Mar 2018 12:13:38 +0530</pubDate><guid>https://passerby1.dev/posts/post-5/</guid><description>passerby1's website https://passerby1.dev/posts/post-5/ -&lt;p>Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.&lt;/p>
 &lt;h1 id="heading-1">Heading 1&lt;/h1>
 &lt;p>Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.&lt;/p>
 &lt;h2 id="heading-2">Heading 2&lt;/h2>
@@ -16,20 +16,20 @@
 &lt;pre>&lt;code>print 'this is pre tag'
 &lt;/code>&lt;/pre>
 &lt;p>Following is the syntax highlighted code block&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8b008b;font-weight:bold">func&lt;/span> &lt;span style="color:#008b45">getCookie&lt;/span>(name &lt;span style="color:#00688b;font-weight:bold">string&lt;/span>, r &lt;span style="color:#8b008b;font-weight:bold">interface&lt;/span>{}) (*http.Cookie, &lt;span style="color:#00688b;font-weight:bold">error&lt;/span>) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rd := r.(*http.Request)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> cookie, err := rd.&lt;span style="color:#008b45">Cookie&lt;/span>(name)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> err != &lt;span style="color:#8b008b;font-weight:bold">nil&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">nil&lt;/span>, err
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">func&lt;/span> &lt;span style="color:#268bd2">getCookie&lt;/span>(name &lt;span style="color:#dc322f">string&lt;/span>, r &lt;span style="color:#268bd2">interface&lt;/span>{}) (&lt;span style="color:#719e07">*&lt;/span>http.Cookie, &lt;span style="color:#dc322f">error&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rd &lt;span style="color:#719e07">:=&lt;/span> r.(&lt;span style="color:#719e07">*&lt;/span>http.Request)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> cookie, err &lt;span style="color:#719e07">:=&lt;/span> rd.&lt;span style="color:#268bd2">Cookie&lt;/span>(name)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#719e07">if&lt;/span> err &lt;span style="color:#719e07">!=&lt;/span> &lt;span style="color:#cb4b16">nil&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#719e07">return&lt;/span> &lt;span style="color:#cb4b16">nil&lt;/span>, err
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> cookie, &lt;span style="color:#8b008b;font-weight:bold">nil&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#719e07">return&lt;/span> cookie, &lt;span style="color:#cb4b16">nil&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8b008b;font-weight:bold">func&lt;/span> &lt;span style="color:#008b45">setCookie&lt;/span>(cookie *http.Cookie, w &lt;span style="color:#8b008b;font-weight:bold">interface&lt;/span>{}) &lt;span style="color:#00688b;font-weight:bold">error&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#228b22">// Get write interface registered using `Acquire` method in handlers.
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#228b22">&lt;/span> wr := w.(http.ResponseWriter)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> http.&lt;span style="color:#008b45">SetCookie&lt;/span>(wr, cookie)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">nil&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">func&lt;/span> &lt;span style="color:#268bd2">setCookie&lt;/span>(cookie &lt;span style="color:#719e07">*&lt;/span>http.Cookie, w &lt;span style="color:#268bd2">interface&lt;/span>{}) &lt;span style="color:#dc322f">error&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#586e75">// Get write interface registered using `Acquire` method in handlers.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#586e75">&lt;/span> wr &lt;span style="color:#719e07">:=&lt;/span> w.(http.ResponseWriter)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> http.&lt;span style="color:#268bd2">SetCookie&lt;/span>(wr, cookie)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#719e07">return&lt;/span> &lt;span style="color:#cb4b16">nil&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This is blockquote, Will make it &lt;em>better now&lt;/em>&lt;/p>
 &lt;blockquote>
@@ -50,4 +50,4 @@
 &lt;li>Green&lt;/li>
 &lt;li>Blue&lt;/li>
 &lt;/ol>
-- https://passerby1.dev/posts/post-5/ - This is a customized copyright.</description></item></channel></rss>
+- https://passerby1.dev/posts/post-5/ - passerby1</description></item></channel></rss>
