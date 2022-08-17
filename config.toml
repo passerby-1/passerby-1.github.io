@@ -21,21 +21,24 @@ theme = "diary"
 
 [params]
 subtitle = "やっとブログを建てた人"
-enableGitalk = true
+# enableGitalk = true
+disqusShortname = "passerby1"
 # favicon = "address of favicon"
 
 # Twitter Card and Open Graph settings
 enableOpenGraph = true
 enableTwitterCards = true
+enableReadingTime = true
 title = "passerby1.dev" # will set 'og:site_name'
 description = "やっとブログを建てた人"  # will set 'og:description'
 
-[params.gitalk]
-  owner = "user"
-  repo = "repo name"
-  client_id = "your client id"
-  client_secret = "your client secret"
-  
+# [params.gitalk]
+#   owner = "user"
+#   repo = "repo name"
+#   client_id = "your client id"
+#   client_secret = "your client secret"
+
+
 [taxonomies]
    tag = "tags"
    category = "categories"
