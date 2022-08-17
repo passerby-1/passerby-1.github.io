@@ -1,0 +1,53 @@
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>passerby1's website</title><link>https://passerby1.dev/</link><description>Recent content on passerby1's website</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>passerby1</copyright><lastBuildDate>Sun, 18 Mar 2018 12:13:38 +0530</lastBuildDate><atom:link href="https://passerby1.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Typography - Test for features</title><link>https://passerby1.dev/posts/post-5/</link><pubDate>Sun, 18 Mar 2018 12:13:38 +0530</pubDate><guid>https://passerby1.dev/posts/post-5/</guid><description>passerby1's website https://passerby1.dev/posts/post-5/ -&lt;p>Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.&lt;/p>
+&lt;h1 id="heading-1">Heading 1&lt;/h1>
+&lt;p>Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.&lt;/p>
+&lt;h2 id="heading-2">Heading 2&lt;/h2>
+&lt;p>Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.&lt;/p>
+&lt;h3 id="heading-3">Heading 3&lt;/h3>
+&lt;p>Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.&lt;/p>
+&lt;h4 id="heading-4">Heading 4&lt;/h4>
+&lt;p>Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.&lt;/p>
+&lt;h5 id="heading-5">Heading 5&lt;/h5>
+&lt;p>Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.&lt;/p>
+&lt;h6 id="heading-6">Heading 6&lt;/h6>
+&lt;p>Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.&lt;/p>
+&lt;h2 id="typography">Typography&lt;/h2>
+&lt;p>Lid est laborum et dolorum fuga, This is &lt;a href="http://example.com/" title="Title">an example&lt;/a> inline link. Et harum quidem rerum facilis, &lt;strong>This is bold&lt;/strong> and &lt;em>emphasis&lt;/em> cumque nihilse impedit quo minus id quod amets untra dolor amet sad. While this is &lt;code>code block()&lt;/code> and following is a &lt;code>pre&lt;/code> tag&lt;/p>
+&lt;pre>&lt;code>print 'this is pre tag'
+&lt;/code>&lt;/pre>
+&lt;p>Following is the syntax highlighted code block&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">func&lt;/span> &lt;span style="color:#268bd2">getCookie&lt;/span>(name &lt;span style="color:#dc322f">string&lt;/span>, r &lt;span style="color:#268bd2">interface&lt;/span>{}) (&lt;span style="color:#719e07">*&lt;/span>http.Cookie, &lt;span style="color:#dc322f">error&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rd &lt;span style="color:#719e07">:=&lt;/span> r.(&lt;span style="color:#719e07">*&lt;/span>http.Request)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> cookie, err &lt;span style="color:#719e07">:=&lt;/span> rd.&lt;span style="color:#268bd2">Cookie&lt;/span>(name)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#719e07">if&lt;/span> err &lt;span style="color:#719e07">!=&lt;/span> &lt;span style="color:#cb4b16">nil&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#719e07">return&lt;/span> &lt;span style="color:#cb4b16">nil&lt;/span>, err
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#719e07">return&lt;/span> cookie, &lt;span style="color:#cb4b16">nil&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">func&lt;/span> &lt;span style="color:#268bd2">setCookie&lt;/span>(cookie &lt;span style="color:#719e07">*&lt;/span>http.Cookie, w &lt;span style="color:#268bd2">interface&lt;/span>{}) &lt;span style="color:#dc322f">error&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#586e75">// Get write interface registered using `Acquire` method in handlers.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#586e75">&lt;/span> wr &lt;span style="color:#719e07">:=&lt;/span> w.(http.ResponseWriter)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> http.&lt;span style="color:#268bd2">SetCookie&lt;/span>(wr, cookie)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#719e07">return&lt;/span> &lt;span style="color:#cb4b16">nil&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This is blockquote, Will make it &lt;em>better now&lt;/em>&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;lsquo;I want to do with you what spring does with the cherry trees.&amp;rsquo; &lt;!-- raw HTML omitted -->cited ~Pablo Neruda&lt;!-- raw HTML omitted -->*&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>Et harum quidem &lt;em>rerum facilis&lt;/em> est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit&lt;/p>
+&lt;/blockquote>
+&lt;p>Unordered list&lt;/p>
+&lt;ul>
+&lt;li>Red&lt;/li>
+&lt;li>Green&lt;/li>
+&lt;li>Blue&lt;/li>
+&lt;/ul>
+&lt;p>Ordered list&lt;/p>
+&lt;ol>
+&lt;li>Red&lt;/li>
+&lt;li>Green&lt;/li>
+&lt;li>Blue&lt;/li>
+&lt;/ol>
+- https://passerby1.dev/posts/post-5/ - passerby1</description></item></channel></rss>
