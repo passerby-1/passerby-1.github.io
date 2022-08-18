@@ -65,7 +65,7 @@ name = "Archive"
 weight = 1
 [[menu.main]]
 url = "/index.xml"
-pre = ""
+pre = "<i class='fa-solid fa-square-rss'></i>"
 name = "RSS Feed"
 weight = 4
 [[menu.main]]
