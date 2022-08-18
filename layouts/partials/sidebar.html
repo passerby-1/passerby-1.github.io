@@ -24,17 +24,17 @@
             {{end}}
             {{ if .HasChildren }}
             <div class="a-block" class="nav-link-item {{$actived}}" v-on:click="isHidden = !isHidden">
-                {{ .Name }}
+                {{ .Icon }}{{ .Name }}
                 <div class="nav-link-subitem" v-if="!isHidden">
                     {{ range .Children }}
-                    <li><a href="{{ .URL }}"> {{ .Icon }}{{ .Name }}</a></li>
+                    <li><a href="{{ .URL }}"> {{ .Name }}</a></li>
                     {{ end }}
                 </div>
             </div>
             {{ else }}
             <!--<a class="a-block nav-link-item {{$actived}}" href="{{ .URL }}">-->
             <a class="a-block nav-link-item {{ $actived }}" href="{{ .URL }}">
-                {{ .Name }}
+                {{ .Icon }}{{ .Name }}
             </a>
             {{ end }}
         {{ end }}
