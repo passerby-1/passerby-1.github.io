@@ -50,31 +50,31 @@ description = "やっとブログを建てた人"  # will set 'og:description'
 
 [[menu.main]]
 url = "/categories"
-icon = ""
+pre = ""
 name = "Categories"
 weight = 2
 [[menu.main]]
 url = "/tags"
-icon = ""
+pre = ""
 name = "Tags"
 weight = 3
 [[menu.main]]
 url = "/posts"
-icon = ""
+pre = ""
 name = "Archive"
 weight = 1
 [[menu.main]]
 url = "/index.xml"
-icon = ""
+pre = ""
 name = "RSS Feed"
 weight = 4
 [[menu.main]]
 url = "https://twitter.com/passerby1_"
-icon = '<i class="fa-brands fa-twitter"></i>'
+pre = "<i class='fa-brands fa-twitter'></i>"
 name = "Twitter"
 weight = 5
 [[menu.main]]
 url = "https://github.com/passerby-1"
-icon = '<i class="fa-brands fa-github"></i>'
+pre = "<i class='fa-brands fa-github'></i>"
 name = "GitHub"
 weight = 6
