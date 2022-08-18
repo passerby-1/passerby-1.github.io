@@ -38,16 +38,26 @@ description = "やっとブログを建てた人"  # will set 'og:description'
 #   client_id = "your client id"
 #   client_secret = "your client secret"
 
+[[params.sosial]]
+  name = "Twitter"
+    icon = "fa-brands fa-twitter"
+    weight = 1
+    url = "https://twitter.com/passerby1_"
+[[params.sosial]]
+  name = "GitHub"
+    icon = "fa-brands fa-github"
+    weight = 2
+    url = "https://github.com/passerby-1"
 
 [taxonomies]
    tag = "tags"
    category = "categories"
 
-[params.utterances]
-repo="your repo"
-term="[ENTER TERM HERE]"
-label="your label"
-theme="github-light"
+# [params.utterances]
+# repo="your repo"
+# term="[ENTER TERM HERE]"
+# label="your label"
+# theme="github-light"
 
 [[menu.main]]
 url = "/categories"
@@ -65,3 +75,11 @@ weight = 1
 url = "/index.xml"
 name = "RSS Feed"
 weight = 4
+[[menu.main]]
+url = "https://twitter.com/passerby1_"
+name = "Twitter"
+weight = 5
+[[menu.main]]
+url = "https://github.com/passerby-1"
+name = "GitHub"
+weight = 6
