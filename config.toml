@@ -65,16 +65,16 @@ name = "Archive"
 weight = 1
 [[menu.main]]
 url = "/index.xml"
-pre = "<i class='fas fa-rss fa-fw'></i>"
+pre = "<i class='fas fa-rss'></i>"
 name = "RSS Feed"
 weight = 4
 [[menu.main]]
 url = "https://twitter.com/passerby1_"
-pre = "<i class='fab fa-twitter fa-fw'></i>"
+pre = "<i class='fab fa-twitter'></i>"
 name = "Twitter"
 weight = 5
 [[menu.main]]
 url = "https://github.com/passerby-1"
-pre = "<i class='fab fa-github fa-fw'></i>"
+pre = "<i class='fab fa-github'></i>"
 name = "GitHub"
 weight = 6
