@@ -70,11 +70,11 @@ name = "RSS"
 weight = 4
 [[menu.main]]
 url = "https://twitter.com/passerby1_"
-pre = ""
-name = "<i class='fab fa-twitter'></i>"
+pre = "<i class='fab fa-twitter'></i>"
+name = ""
 weight = 5
 [[menu.main]]
 url = "https://github.com/passerby-1"
-pre = ""
-name = "<i class='fab fa-github'></i>"
+pre = "<i class='fab fa-github'></i>"
+name = ""
 weight = 6
