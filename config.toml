@@ -72,12 +72,12 @@ weight = 4
 url = "https://twitter.com/passerby1_"
 pre = "<i class='fab fa-twitter'></i>"
 name = ""
-weight = 6
+weight = 5
 [[menu.main]]
 url = "https://github.com/passerby-1"
 pre = "<i class='fab fa-github'></i>"
-name = "&#x1F363"
-weight = 5
+name = ""
+weight = 6
 [[menu.main]]
 url = "https://amzn.passerby1.dev"
 pre = "<i class='fab fa-amazon'></i>"
