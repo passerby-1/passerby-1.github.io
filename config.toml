@@ -76,7 +76,7 @@ weight = 5
 [[menu.main]]
 url = "https://github.com/passerby-1"
 pre = "<i class='fab fa-github'></i>"
-name = "&#x1200B"
+name = "&#x200B"
 weight = 6
 [[menu.main]]
 url = "https://amzn.passerby1.dev"
