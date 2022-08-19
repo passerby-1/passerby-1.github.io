@@ -48,6 +48,8 @@ description = "やっとブログを建てた人"  # will set 'og:description'
 # label="your label"
 # theme="github-light"
 
+
+# "name" must be unique (key,value)
 [[menu.main]]
 url = "/categories"
 pre = ""
@@ -71,12 +73,12 @@ weight = 4
 [[menu.main]]
 url = "https://twitter.com/passerby1_"
 pre = "<i class='fab fa-twitter'></i>"
-name = "test"
+name = "&#x200B"
 weight = 5
 [[menu.main]]
 url = "https://github.com/passerby-1"
 pre = "<i class='fab fa-github'></i>"
-name = "test"
+name = "&#xFEFF"
 weight = 6
 [[menu.main]]
 url = "https://amzn.passerby1.dev"
