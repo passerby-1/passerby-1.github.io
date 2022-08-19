@@ -71,12 +71,12 @@ weight = 4
 [[menu.main]]
 url = "https://twitter.com/passerby1_"
 pre = "<i class='fab fa-twitter'></i>"
-name = "　"
+#name = ""
 weight = 5
 [[menu.main]]
 url = "https://github.com/passerby-1"
 pre = "<i class='fab fa-github'></i>"
-name = "　"
+#name = ""
 weight = 6
 [[menu.main]]
 url = "https://amzn.passerby1.dev"
