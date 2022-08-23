@@ -287,7 +287,12 @@ body.night {
     * {
       color: $dark-mode-text;
     }
-  }
+
+    .search-form {
+      background-color: $dark-mode-front-container-background;
+    }
   
+  }
+
 }
 
