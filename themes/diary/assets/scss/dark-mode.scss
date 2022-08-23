@@ -281,4 +281,13 @@ body.night {
   .fas {
     color: $dark-mode-text;
   }
+
+  .search {
+    background-color: $dark-mode-front-container-background;
+    * {
+      color: $dark-mode-text;
+    }
+  }
+  
 }
+

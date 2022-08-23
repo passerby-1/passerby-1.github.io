@@ -1,9 +1,9 @@
-<div class="search-area">
+<div class="search search-area">
+    <div class="search-button">
+        <i class='fas fa-search'></i>
+    </div>
     <form class="search-form" action="{{ .Permalink | safeURL }}" onkeyup="search()">
       <input class="search-text" id="search-query" placeholder="Search this site" autocomplete="off"/>
     </form>
-    <div class="search-button">
-      <i class='fas fa-search'></i>
-    </div>
     <ul class="search-results" id="results">
   </div>
