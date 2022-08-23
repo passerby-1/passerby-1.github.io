@@ -2,7 +2,7 @@
 {{- $section := $.Site.GetPage "section" .Section -}}
 {{- range .Site.RegularPages -}}
     {{- if and (.IsDescendant $section) (not .Params.private) -}}
-        {{- $.Scratch.Add "index" (dict "title" .Title "tags" .Params.tags "categories" .Params.categories "contents" .Plain "href" .URL ) -}}
+        {{- $.Scratch.Add "index" (dict "title" .Title "tags" .Params.tags "categories" .Params.categories "contents" .Plain "href" .RelPermalink ) -}}
     {{- end -}}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}
