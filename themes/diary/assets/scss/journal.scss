@@ -1122,11 +1122,21 @@ mjx-container {
   margin-right: 60px;
   margin-top: 30px;
   max-width: 260px;
-  max-height: 80vh;
+  max-height: 160vh;
   overflow: auto;
   background: rgba($color-accent, 0.05);
   &,
   * {
     font-size: $toc-size;
   }
+  
+  .search-button {
+    display:inline-block;
+  }
+
+  .search-form {
+    display:inline-block;
+  }
+
+
 }
