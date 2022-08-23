@@ -48,6 +48,8 @@ description = "やっとブログを建てた人"  # will set 'og:description'
 # label="your label"
 # theme="github-light"
 
+[outputs]
+home=["JSON"]
 
 # "name" must be unique (key,value)
 [[menu.main]]
