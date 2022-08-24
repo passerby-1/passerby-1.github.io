@@ -1139,9 +1139,12 @@ mjx-container {
 
   .search-form {
     margin-top: 10px;
-    margin-right: 5px;
     display:inline-block;
   }
 
 
+}
+
+input.search-text {
+  background-color: rgba($color-accent, 0.05);
 }
