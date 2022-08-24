@@ -1149,7 +1149,10 @@ mjx-container {
     background-color: rgba($color-accent, 0.05);
     border: 1px solid gray; 
     border-radius: 0.33em;
-    outline: 2px solid #3f587d;
+  }
+
+  .search-text:focus {
+    border-color: #3f587d;
   }
 
 }
