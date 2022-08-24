@@ -294,7 +294,8 @@ body.night {
   
     .search-text {
       background-color: $dark-mode-front-container-background;
-      border: 1px solid $color-accent; 
+      border: 1px solid gray; 
+      outline: 2px solid $color-accent;
     }
 
   }
