@@ -292,10 +292,11 @@ body.night {
       background-color: $dark-mode-front-container-background;
     }
   
-  }
+    .search-text {
+      background-color: $dark-mode-front-container-background;
+      border: 1px solid $color-accent; 
+    }
 
-  input.search-text {
-    background-color: $dark-mode-front-container-background;
   }
 
 }

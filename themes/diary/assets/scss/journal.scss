@@ -1142,9 +1142,10 @@ mjx-container {
     display:inline-block;
   }
 
+  .search-text {
+    background-color: rgba($color-accent, 0.05);
+    border: 1px solid #3f587d; 
+    border-radius: 0.33em;
+  }
 
-}
-
-input.search-text {
-  background-color: rgba($color-accent, 0.05);
 }
