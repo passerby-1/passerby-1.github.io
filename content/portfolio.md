@@ -1,6 +1,6 @@
 ---
 title: "Portfolio"
-date: 2022-08-28T21:00:00
+date: 2022-08-29T01:33:37+09:00
 draft: false
 isCJKLanguage: true
 ---
@@ -38,11 +38,12 @@ isCJKLanguage: true
 
 ## Experiences
 
-* 国内某レンタルサーバー事業者 カスタマーサポート (現職)
-* Psychic VR Lab カスタマーサクセスチーム 翻訳担当 (現職)
+* 国内某レンタルサーバ事業者 カスタマーサポート (現)
+* Psychic VR Lab カスタマーサクセスチーム 翻訳担当 (現)
 * 某一般社団法人受託、総務省委託調査における専門家チーム
 
 ### Intern
 * Yahoo Japan 2021 Summber Internship
   * Engineer - 認証・アクセス制御に関するプロダクト開発
   https://about.yahoo.co.jp/hr/internship/2021/1064/
+
