@@ -55,7 +55,7 @@ description = "やっとブログを建てた人"  # will set 'og:description'
 [[menu.main]]
 url = "/posts"
 pre = ""
-name = "Archive"
+name = "Blog"
 weight = 10
 [[menu.main]]
 url = "/categories"
