@@ -1,11 +1,14 @@
 ---
 title: "ブログを建てました"
 date: 2022-08-28T23:00:00
+lastmod: 2022-08-28T23:00:00
 description: Hello world!
 categories: 一般
 tags: 
   - "日常"
   - "Hugo"
+draft: false
+isCJKLanguage: true
 ---
 
 [@passerby1_](https://twitter.com/passerby1_) です。やっとブログを建てました。

@@ -1,6 +1,8 @@
 ---
-title: "About e"
+title: "About Me"
 date: 2022-08-28T21:00:00
+draft: false
+isCJKLanguage: true
 ---
 
 このウェブサイトは、通行人1 ([@passerby1_](https://twitter.com/passerby1_)) の管理する、技術、趣味、その他のコンテンツに関するブログです。記事内に明示した場合を除き、所属先・勤務先等とは関係のない内容となります。
