@@ -53,37 +53,47 @@ description = "やっとブログを建てた人"  # will set 'og:description'
 
 # "name" must be unique (key,value)
 [[menu.main]]
+url = "/posts"
+pre = ""
+name = "Archive"
+weight = 10
+[[menu.main]]
 url = "/categories"
 pre = ""
 name = "Categories"
-weight = 2
+weight = 20
 [[menu.main]]
 url = "/tags"
 pre = ""
 name = "Tags"
-weight = 3
+weight = 30
 [[menu.main]]
-url = "/posts"
+url = "/about"
 pre = ""
-name = "Archive"
-weight = 1
+name = "About"
+weight = 32
+[[menu.main]]
+url = "/portfolio"
+pre = ""
+name = "Portfolio"
+weight = 34
 [[menu.main]]
 url = "/index.xml"
 pre = "<i class='fas fa-rss'></i>"
 name = "RSS"
-weight = 4
+weight = 40
 [[menu.main]]
 url = "https://twitter.com/passerby1_"
 pre = "<i class='fab fa-twitter'></i>"
 name = "&#x200B" # Zero Width Space
-weight = 5
+weight = 50
 [[menu.main]]
 url = "https://github.com/passerby-1"
 pre = "<i class='fab fa-github'></i>"
 name = "&#xFEFF" # Zero Width No-Break Space 
-weight = 6
+weight = 60
 [[menu.main]]
 url = "https://amzn.passerby1.dev"
 pre = "<i class='fab fa-amazon'></i>"
 name = "Wishlist"
-weight = 7
+weight = 70
