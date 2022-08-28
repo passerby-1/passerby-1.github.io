@@ -1,4 +1,98 @@
-<?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>passerby1.dev</title><link>https://passerby1.dev/</link><description>Recent content on passerby1.dev</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>passerby1</copyright><lastBuildDate>Sun, 18 Mar 2018 12:13:38 +0530</lastBuildDate><atom:link href="https://passerby1.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Typography - Test for features</title><link>https://passerby1.dev/posts/post-5/</link><pubDate>Sun, 18 Mar 2018 12:13:38 +0530</pubDate><guid>https://passerby1.dev/posts/post-5/</guid><description>passerby1.dev https://passerby1.dev/posts/post-5/ -&lt;p>Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.&lt;/p>
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>passerby1.dev</title><link>https://passerby1.dev/</link><description>Recent content on passerby1.dev</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>passerby1</copyright><lastBuildDate>Mon, 29 Aug 2022 01:16:35 +0900</lastBuildDate><atom:link href="https://passerby1.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Portfolio</title><link>https://passerby1.dev/portfolio/</link><pubDate>Mon, 29 Aug 2022 01:33:37 +0900</pubDate><guid>https://passerby1.dev/portfolio/</guid><description>passerby1.dev https://passerby1.dev/portfolio/ -&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;ul>
+&lt;li>信州大学 工学部 電子情報システム工学科 4年生
+&lt;ul>
+&lt;li>2023年度より就職予定&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>セキュリティキャンプ全国大会 2021 Bトラック修了&lt;/li>
+&lt;/ul>
+&lt;h2 id="license--certification">License / Certification&lt;/h2>
+&lt;p>括弧内は証書等記載の認定日&lt;/p>
+&lt;ul>
+&lt;li>基本情報技術者 (2017-05)&lt;/li>
+&lt;li>応用情報技術者 (2018-06)&lt;/li>
+&lt;li>情報処理安全確保支援士試験 合格 (2019-06)&lt;/li>
+&lt;li>TOEIC L&amp;amp;R 950 点 (2022-01)&lt;/li>
+&lt;li>TOEFL MyBest Score 86 点 (2022-05)&lt;/li>
+&lt;li>第三級アマチュア無線技士 (2021-10)&lt;/li>
+&lt;/ul>
+&lt;h2 id="skills">Skills&lt;/h2>
+&lt;ul>
+&lt;li>基本的な Linux 操作
+&lt;ul>
+&lt;li>ArchLinux をメインのノート PC として使用する程度&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>技術文書の読解・記述&lt;/li>
+&lt;li>法律文書の読解&lt;/li>
+&lt;li>分野問わずコンピュータ技術全般の広く&amp;quot;浅い&amp;quot;理解&lt;/li>
+&lt;li>若干の C, Golang, Python プログラミング&lt;/li>
+&lt;/ul>
+&lt;h2 id="interest">Interest&lt;/h2>
+&lt;ul>
+&lt;li>FIDO / WebAuthn 周りの認証技術&lt;/li>
+&lt;li>情報セキュリティ全般&lt;/li>
+&lt;li>コンピュータ・サイエンス分野の全ての分野・レイヤの繋がりを理解・説明できるようになりたい
+&lt;ul>
+&lt;li>半導体、CPUのアーキテクチャから機械語、アセンブラ、コンパイラ、OS……フロント分野までの繋がり&lt;/li>
+&lt;li>アルゴリズム、オートマトン、画像処理などの、それを支えるアーキテクチャ&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="experiences">Experiences&lt;/h2>
+&lt;ul>
+&lt;li>国内某レンタルサーバ事業者 カスタマーサポート (現)&lt;/li>
+&lt;li>Psychic VR Lab カスタマーサクセスチーム 翻訳担当 (現)&lt;/li>
+&lt;li>某一般社団法人受託、総務省委託調査における専門家チーム&lt;/li>
+&lt;/ul>
+&lt;h3 id="intern">Intern&lt;/h3>
+&lt;ul>
+&lt;li>Yahoo Japan 2021 Summber Internship
+&lt;ul>
+&lt;li>Engineer - 認証・アクセス制御に関するプロダクト開発
+&lt;a href="https://about.yahoo.co.jp/hr/internship/2021/1064/">https://about.yahoo.co.jp/hr/internship/2021/1064/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+- https://passerby1.dev/portfolio/ - passerby1</description></item><item><title>About</title><link>https://passerby1.dev/about/</link><pubDate>Mon, 29 Aug 2022 01:19:40 +0900</pubDate><guid>https://passerby1.dev/about/</guid><description>passerby1.dev https://passerby1.dev/about/ -&lt;p>このウェブサイトは、通行人1 (&lt;a href="https://twitter.com/passerby1_">@passerby1_&lt;/a>) の管理する、技術、趣味、その他のコンテンツに関するブログです。記事内に明示した場合を除き、所属先・勤務先等とは関係のない内容となります。&lt;/p>
+&lt;p>簡単なポートフォリオについては、&lt;a href="https://passerby1.dev/portfolio">ポートフォリオ&lt;/a> のページを参照ください。&lt;/p>
+&lt;h2 id="contact">Contact&lt;/h2>
+&lt;ul>
+&lt;li>twitter DM
+&lt;ul>
+&lt;li>&lt;a href="https://twitter.com/passerby1_">@passerby1_&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Discord DM
+&lt;ul>
+&lt;li>passerby1_#1111&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>mail
+&lt;ul>
+&lt;li>contact [%AT%] passerby1.dev&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="domains">Domains&lt;/h2>
+&lt;p>以下のドメイン名に関する問題等ありましたら、上記連絡先までご連絡ください。&lt;/p>
+&lt;ul>
+&lt;li>passerby1.dev&lt;/li>
+&lt;li>passerby1.cloud&lt;/li>
+&lt;li>iihana.si&lt;/li>
+&lt;li>kstm.su&lt;/li>
+&lt;li>gugureka.su&lt;/li>
+&lt;/ul>
+&lt;h2 id="license">License&lt;/h2>
+&lt;p>本ウェブサイト上のコンテンツは、フリー素材元や引用元の表記を行っているものを除き、&lt;a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons「表示 - 継承 4.0 国際 (CC BY-SA 4.0)」ライセンス&lt;/a>にて公開されています。
+&lt;img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="Creative Commons License">&lt;/p>
+&lt;p>なお、本ウェブサイトの管理・静的サイト生成に用いられているGitHubリポジトリ (&lt;a href="https://github.com/passerby-1/passerby-1.github.io">passerby-1/passerby-1.github.io&lt;/a>) 上のコードについては、改変使用している Hugo テーマ (&lt;a href="https://github.com/AmazingRise/hugo-theme-diary">AmazingRise/hugo-theme-diary&lt;/a>) 同様、&lt;a href="https://raw.githubusercontent.com/passerby-1/passerby-1.github.io/master/LICENSE">MITライセンス&lt;/a> にて公開されています。&lt;/p>
+- https://passerby1.dev/about/ - passerby1</description></item><item><title>ブログを建てました</title><link>https://passerby1.dev/posts/hello-world/</link><pubDate>Mon, 29 Aug 2022 01:16:35 +0900</pubDate><guid>https://passerby1.dev/posts/hello-world/</guid><description>passerby1.dev https://passerby1.dev/posts/hello-world/ -&lt;p>&lt;a href="https://twitter.com/passerby1_">@passerby1_&lt;/a> です。やっとブログを建てました。
+かなり前から作りたかったのですが、変なこだわりを持ってしまって (派手すぎないテーマ, 記事一覧での画像表示, ダークテーマ切替え, OGP対応, 検索機能, フォロワーと同じテーマで被りたくないな…, note はなぁ…などなど) ちょうど良いテーマが見つからなかったり、希望に近いテーマを改造しようとしたり、最後までやる程の気力・時間が確保できなかったり、他の事に忙しかったりなどで後回しになってしまいました。&lt;/p>
+&lt;p>今回、Golang による静的ウェブサイトジェネレータである Hugo の &lt;a href="https://github.com/AmazingRise/hugo-theme-diary">AmazingRise/hugo-theme-diary&lt;/a> テーマを見つけ、これが自分の希望する多くの条件に合致していたことから、気力と時間があるうちにやりきることができました。オリジナルのテーマに加えて Lunr.js による全文検索機能と fontawesome を使えるようにしたくらいの改変で済んで良かったです。&lt;/p>
+&lt;p>このブログに何を書くかについてはあまり考えていませんが、家で動かしている TrueNAS の鯖の話やら、買ったガジェットの話やら、オススメの本の話やらになるかと思います。頻繁に更新はしないと思いますが、twitter に書くには長い内容を書いていきたいと思います。&lt;/p>
+- https://passerby1.dev/posts/hello-world/ - passerby1</description></item><item><title>Typography - Test for features</title><link>https://passerby1.dev/posts/post-5/</link><pubDate>Sun, 18 Mar 2018 12:13:38 +0530</pubDate><guid>https://passerby1.dev/posts/post-5/</guid><description>passerby1.dev https://passerby1.dev/posts/post-5/ -&lt;p>Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.&lt;/p>
 &lt;h1 id="heading-1">Heading 1&lt;/h1>
 &lt;p>Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.&lt;/p>
 &lt;h2 id="heading-2">Heading 2&lt;/h2>
