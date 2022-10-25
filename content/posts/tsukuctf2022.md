@@ -14,7 +14,7 @@ draft: false
 
 焼肉
 
-https://twitter.com/passerby1_/status/1583796883516186626
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">友人と家で焼肉をした <a  href="https://t.co/IesUwBSQCj">pic.twitter.com/IesUwBSQCj</a></p>— 通行人1 (@passerby1_) <a  href="https://twitter.com/passerby1_/status/1583796883516186626?ref_src=twsrc%5Etfw">October 22, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js"  charset="utf-8"></script> 
 
 
 
@@ -23,7 +23,7 @@ https://twitter.com/passerby1_/status/1583796883516186626
 つくしくんはある観光地を調査した際に訪れた駅で写真を撮影した。果たしてこの写真が撮られた駅はどこだろうか？ フラグは駅の郵便番号（ハイフンなし）を入力して下さい
  e.g. 東京駅の場合は郵便番号が100-0005なのでフラグは `TsukuCTF22{1000005}` となります。
 
-![Attack_of_Tsukushi](../../static/images/202210/tsukuctf2022/Attack_of_Tsukushi.jpg)
+![Attack_of_Tsukushi](/images/202210/tsukuctf2022/Attack_of_Tsukushi.jpg)
 
 これはGoogle Lensで一発でした。
 
@@ -37,7 +37,7 @@ JR日田駅 `TsukuCTF22{8770013}`
 
 どこ？ フラグは写真が撮影された場所の郵便番号(ハイフンを除く)を入れて下さい。例えば撮影された場所が東京都庁の場合、郵便番号は163-8001なので`TsukuCTF22{1638001}`となります。
 
-![money](../../static/images/202210/tsukuctf2022/money.jpg)
+![money](/images/202210/tsukuctf2022/money.jpg)
 
 これもGoogle Lensで見たところ、金閣寺でした。たしかに見かけたことある気がする。
 
@@ -52,7 +52,7 @@ JR日田駅 `TsukuCTF22{8770013}`
 つくし君は、はるばる飛行機で愛するパートナーのもとへやってきました。
 ここはどこの空港かわかりますか？ ` この問題はフラグを10回までしか提出できません。` ` ※フラグの形式はTsukuCTF22{空港名}です。空港の名前だけを入力してください。(hoge空港の場合、hogeのみがフラグになります)`
 
-![airport](../../static/images/202210/tsukuctf2022/airport.jpeg)
+![airport](/images/202210/tsukuctf2022/airport.jpeg)
 
 並んでいる航空会社、機種、雰囲気で調べるまでもなく、福岡空港だと予想がついたので入力してみたところ、一発でした。~~筑紫国ということでタイトルが半ば答えになっている~~
 
@@ -69,7 +69,7 @@ JR日田駅 `TsukuCTF22{8770013}`
 つくし君は愛知県犬山市にデートに来た時の思い出の写真を見返しています。 おいしそうな写真を見つけ、おやつが食べたくなりました。 写真のおやつの名前を教えてください。
  `※フラグの形式はTsukuCTF22{XXXXXXX ver.XXXXXX}です。`
 
-![inuyama082](../../static/images/202210/tsukuctf2022/inuyama082.jpg)
+![inuyama082](/images/202210/tsukuctf2022/inuyama082.jpg)
 
 `犬山 抹茶 "ver"` で調べたらそれっぽい店のtwitterアカウントを見つかりました。
 
@@ -90,7 +90,7 @@ https://www.yoakeya1916.com/menu-%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC/
 帰ってくるあなたが最高のプレゼント。つくし君は電車にガタゴト揺られています。次の停車駅で降りるようなのですが、どこかわかりますか？
 `※フラグの形式はTsukuCTF22{次の停車駅}です。公式サイトの表記を採用します(スペースは含めません)。`
 
-![sky](../../static/images/202210/tsukuctf2022/sky.jpg)
+![sky](/images/202210/tsukuctf2022/sky.jpg)
 
 どう見ても名鉄2000/2200の特別車、豊橋行ったときに乗りました。
 
@@ -109,7 +109,7 @@ https://www.yoakeya1916.com/menu-%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC/
 旅行中のつくし君は迷子になってしまったようです。うつむいています。送られてきた写真から場所を特定できますか？
  `※フラグの形式はTsukuCTF22{緯度_経度}です。ただし、緯度経度は十進法で小数点以下五桁目を切り捨てたものとします。`
 
-![douro](../../static/images/202210/tsukuctf2022/douro.jpg)
+![douro](/images/202210/tsukuctf2022/douro.jpg)
 
 四隅の一番左下にある文字が手掛かりになりそう。
 
@@ -143,7 +143,7 @@ https://maps.gsi.go.jp/#18/34.576342/136.531407/&base=std&ls=std&disp=1&vs=c1g1j
 
 Mr.Tsukushi waits his friend at a station. Then, where is he? Flag format is `TsukuCTF22{Station Name(Kanji, Hiragana, or English are available)}`. Notice: use name published on some websites as a station name use half-width alphanumeric characters, if numbers are included do NOT include "Station" in submitted flag For example, if "Tokyo Station" is an answer, the flag is "TsukuCTF22{東京}", "TsukuCTF22{とうきょう}", or "TsukuCTF22{Tokyo}" Submissions are limited to 10 times.
 
-![station](../../static/images/202210/tsukuctf2022/station.jpg)
+![station](/images/202210/tsukuctf2022/station.jpg)
 
 東豊線とあるので札幌市営地下鉄でしょう。東豊線、南北線の案内が見えるので写っているのは東西線のホーム? ホームドアの感じもそれっぽい。この乗換案内が出て違和感が無いのは西11丁目か大通りかバスセンター前の3択、左上に見切れている部分が西11丁目と読める気がするので入れてみたら正解でした。
 
@@ -157,7 +157,7 @@ Mr.Tsukushi waits his friend at a station. Then, where is he? Flag format is `Ts
 
 北海道に住んでいるつくしさんは東京旅行に行った際に高層ビルの窓から写真を撮りました。 でも撮影した場所を忘れてしまったようです。この写真が撮影された場所について建物名を教えてあげてください。 フラグはこの建物の開業日(`YYYY/MM/DD`)です。たとえば、東京スカイツリーの開業日は2012年5月22日なので、フラグは`TsukuCTF22{2012/05/22}`となります。
 
-![Where](../../static/images/202210/tsukuctf2022/Where.jpg)
+![Where](/images/202210/tsukuctf2022/Where.jpg)
 
 西武、丸井の感じで渋谷だと分かり、目の前のデカい建物はスクランブルスクエアなので、方角的にパルコかな? と、調べてみると、リニューアル日は2019-11-22、開店日は1973-06-14
 
@@ -171,7 +171,7 @@ Mr.Tsukushi waits his friend at a station. Then, where is he? Flag format is `Ts
 
 観光地に来たつくし君は、豪華なバスを見かけたので、それに乗って観光することにしました。 その時、つくし君のお母さんから「どこにいるの？」と連絡が着ましたが、おっちょこちょいなつくし君は、観光地の名前も、乗っているバスの路線も忘れてしまい、とっさに車内の写真を撮って、「ここ」と返信しました。 つくしくんはどこにいるのでしょうか？ つくしくんが写真を撮ったところに最も近い交差点の名前を特定してください。 ` ※フラグの形式はTsukuCTF22{交差点の名前}です。`
 
-![GorgeousInteriorBus](../../static/images/202210/tsukuctf2022/GorgeousInteriorBus.jpg)
+![GorgeousInteriorBus](/images/202210/tsukuctf2022/GorgeousInteriorBus.jpg)
 
 モニターの地図の感じが熱海っぽいので、`熱海  バス` で検索。当たっていたので路線図を確認し、次のバス停は「銀座」なので「サンビーチ」バス停との間の区間と判明。
 
@@ -188,7 +188,7 @@ Mr.Tsukushi waits his friend at a station. Then, where is he? Flag format is `Ts
 つくしくんは荷物を運び終えて休憩してるときに撮った写真。さて撮影場所はどこだろう？
 `※フラグの形式はTsukuCTF22{緯度_経度}です。ただし、緯度経度は十進法で小数点以下五桁目を切り捨てたものとします。`
 
-![Bringer_of_happiness](../../static/images/202210/tsukuctf2022/Bringer_of_happiness.jpg)
+![Bringer_of_happiness](/images/202210/tsukuctf2022/Bringer_of_happiness.jpg)
 
 島原鉄道かなぁ? と、Wikipediaの島原鉄道線の記事を確認。
 
@@ -215,7 +215,7 @@ TsukuCTF22{32.7693_130.3705}、これは通らなかった。
 つくし君の大好きなお姉さんのデスクを見学させてもらったよ。 さて、このデスクはどこにあるのだろうか?
 フラグ形式は写真が撮影された場所の郵便番号(ハイフンを除く)を入れて下さい。例えば撮影された場所が東京都庁の場合、郵便番号は163-8001なので `TsukuCTF22{1638001}` となります。
 
-![Desk](../../static/images/202210/tsukuctf2022/Desk.jpg)
+![Desk](/images/202210/tsukuctf2022/Desk.jpg)
 
 目の前のパンフレット? に写っているのは沖縄。右下のキャラクターをGoogle Lensで検索しても出てこないので、これを調べる。`沖縄 爺さん キャラクター` で検索したら、ゆるキャラグランプリの「なんじぃ」のページがヒットした。沖縄県南城市のキャラクターらしい。
 
@@ -235,7 +235,7 @@ https://basukore.com/okinawa-0005/
 
 日本の町は美しい。撮影地を答えてください。 フラグはこの建物の開業日(`YYYY/MM/DD`)です。たとえば、東京スカイツリーの開業日は2012年5月22日なので、フラグは`TsukuCTF22{2012/05/22}`となります。 ※10/24 00:21(JST)追記: 竣工日を入力しても正答とすることにしました。
 
-![TakaiTakai](../../static/images/202210/tsukuctf2022/TakaiTakai.jpg)
+![TakaiTakai](/images/202210/tsukuctf2022/TakaiTakai.jpg)
 
 幾つかの建物の形が特徴的なので使えそう。手前の角が丸まっているビル、三角形のビル、中央の中庭がありそうな奴、右奥の屋根が特徴的な体育館、右奥の上部フロアの色が違うマンションっぽい高層ビル等。
 
@@ -262,7 +262,7 @@ https://basukore.com/okinawa-0005/
 イケメンのつくしくんは訪れている場所の写真をSNSに投稿したところ、ストーカーに特定されてしまった。ストーカー曰く「好きなゲームと新聞がコラボしたときの広告にこの場所が映っていたのを思い出した」とのことだった。
 フラグは写真が撮影された場所の郵便番号(ハイフンを除く)を入れて下さい。例えば撮影された場所が東京都庁の場合、郵便番号は163-8001なので `TsukuCTF22{1638001}`となります。
 
-![PaperJack](../../static/images/202210/tsukuctf2022/PaperJack.jpg)
+![PaperJack](/images/202210/tsukuctf2022/PaperJack.jpg)
 
 「好きなゲームと新聞がコラボしたときの広告」は、以前話題になったFGOの奴かな? と予想がついたので、FGOのコラボ広告の一覧を確認する。
 
@@ -280,7 +280,7 @@ https://5th.fate-go.jp/
 
 つくし君は、ある女の子のSNSアカウントを眺めています。 つくし「この場所を特定して僕も同じ場所の同じ構図で写真を撮りたい！」 つくし君の願いを叶えるべく、この場所を特定してあげましょう。 `※フラグの形式はTsukuCTF22{緯度_経度}です。ただし、緯度経度は十進法で小数点以下五桁目を切り捨てたものとします。`
 
-![banana](../../static/images/202210/tsukuctf2022/banana.jpg)
+![banana](/images/202210/tsukuctf2022/banana.jpg)
 
 右のバナナをGoogle Lens検索しても出ないが、左の模様を検索すると以下のページが引っかかった。
 
@@ -310,7 +310,7 @@ I am planning to participate in the TsukuCTF with him. But I don't know much abo
 First, specify his Twitter account and ask for the date the account was created.
 The flag format is `TsukuCTF22{YYYY/MM/DD}`.
 
-![discord](../../static/images/202210/tsukuctf2022/discord.png)
+![discord](/images/202210/tsukuctf2022/discord.png)
 
 ~~TsukuCTFのアカウントのフォロワーは少ないので~~フォロワーを見たら同じアイコンを発見
 
@@ -335,7 +335,7 @@ https://midnight2d.com/itsukara/
 つくし君がロボット見学に訪れた施設はどこ？
 フラグ形式は `TsukuCTF22{施設名}` となります。施設名の表記は、その施設の英語版ホームページの表記に従います。
 
-![Robot](../../static/images/202210/tsukuctf2022/Robot.jpg)
+![Robot](/images/202210/tsukuctf2022/Robot.jpg)
 
 実験の「験」が簡体字なので中国本土っぽい。
 
@@ -403,7 +403,7 @@ https://map.apahotel.com/map/460
 
 手前の電車は何時何分に発車するでしょうか？ フラグ形式はTsukuCTF22{xx:xx}で、24時間表記です。 提出回数制限: 5回
 
-![what_time_is_it](../../static/images/202210/tsukuctf2022/what_time_is_it.jpeg)
+![what_time_is_it](/images/202210/tsukuctf2022/what_time_is_it.jpeg)
 
 正面に写っている車両は、JR四国の2600系で、少しググるとこの編成は高松運転所の所属であること、主に特急うずしおで使われていることがわかる。
 
@@ -467,7 +467,7 @@ https://twitter.com/SuperProStalker/status/1581681692242477059?s=20
 
 I received a DM from a mysterious person. Please investigate the  person who sent the DM and find out what other web services this person  uses. Note 1: This person uses multiple web services, but the flag is embedded in one of their profiles. Note 2: URL included in the image is here. `https://bit.ly/3Ekih5M`
 
-![DM](../../static/images/202210/tsukuctf2022/DM.png)
+![DM](/images/202210/tsukuctf2022/DM.png)
 
 
 
@@ -477,7 +477,7 @@ Google Docs から何か情報を得る方法が無いかを調べると、Googl
 
 https://github.com/Malfrats/xeuledoc
 
-![flagdm_xeuledoc](../../static/images/202210/tsukuctf2022/flagdm_xeuledoc.png)
+![flagdm_xeuledoc](/images/202210/tsukuctf2022/flagdm_xeuledoc.png)
 
 これを試すと、
 
@@ -485,7 +485,7 @@ https://github.com/Malfrats/xeuledoc
 
 このアカウントに、1件のみGoogle Mapsのレビューがあり、この写真の端の著作権表示にtwitterアカウントが書かれていた。
 
-![flagdm_map](../../static/images/202210/tsukuctf2022/flagdm_map.jpeg)
+![flagdm_map](/images/202210/tsukuctf2022/flagdm_map.jpeg)
 
 最初、画像の角が隠れており気づかず、他の情報を探して時間を浪費してしまった。
 
@@ -497,11 +497,11 @@ https://www.youtube.com/channel/UCZ7_GtoaC4oHCKBLhJi13Ww
 
 Google 関連のOSINTツールであるGHunt (https://github.com/mxrch/GHunt) を利用したが、特に有用な情報は得られなかった。
 
-![flagdm_ghunt](../../static/images/202210/tsukuctf2022/flagdm_ghunt.png)
+![flagdm_ghunt](/images/202210/tsukuctf2022/flagdm_ghunt.png)
 
 チャンネル名の `gross_poem` が、他サービスで使われていないか、sherlock (https://github.com/sherlock-project/sherlock) で調べると、いくつかのアカウントが見つかった。
 
-![flagdm_sherlock](../../static/images/202210/tsukuctf2022/flagdm_sherlock.png)
+![flagdm_sherlock](/images/202210/tsukuctf2022/flagdm_sherlock.png)
 
 間違って検索に引っかかっている情報もあったが、このうちTraktの情報を調べると、ユーザーが見つかった。
 
