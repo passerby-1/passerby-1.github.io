@@ -21,7 +21,6 @@ isCJKLanguage: false
 以下のドメイン名に関する問題等ありましたら、上記連絡先までご連絡ください。
 * passerby1.dev
 * passerby1.cloud
-* iihana.si
 * kstm.su
 * gugureka.su
 
