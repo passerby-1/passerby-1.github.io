@@ -43,7 +43,7 @@ isCJKLanguage: true
 * 某一般社団法人受託、総務省委託調査における専門家チーム
 
 ### Intern
-* Yahoo Japan 2021 Summber Internship
+* Yahoo Japan 2021 Summer Internship
   * Engineer - 認証・アクセス制御に関するプロダクト開発
   https://about.yahoo.co.jp/hr/internship/2021/1064/
 
