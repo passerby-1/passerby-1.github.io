@@ -2,7 +2,7 @@
 &lt;p>このブログを建ててから、あまり時間が取れず何も書けていなかったので、気軽にかける内容として先日出たTsukuCTFのWriteupを書いてみました。&lt;/p>
 &lt;p>土曜は友人と焼肉を食らう予定があったので、日曜に日付が変わってからの参加となりましたが、1人チームkstmとして出場し、最終的に13位、1人チームでは3位となりました。後から追い上げた割には悪くないかな?&lt;/p>
 &lt;p>焼肉&lt;/p>
-&lt;!-- raw HTML omitted -->
+&lt;blockquote class="twitter-tweet">&lt;p lang="ja" dir="ltr">友人と家で焼肉をした &lt;a href="https://t.co/IesUwBSQCj">pic.twitter.com/IesUwBSQCj&lt;/a>&lt;/p>— 通行人1 (@passerby1_) &lt;a href="https://twitter.com/passerby1_/status/1583796883516186626?ref_src=twsrc%5Etfw">October 22, 2022&lt;/a>&lt;/blockquote> &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
 &lt;h2 id="attack-of-tsukushi-easy">Attack of Tsukushi (easy)&lt;/h2>
 &lt;p>つくしくんはある観光地を調査した際に訪れた駅で写真を撮影した。果たしてこの写真が撮られた駅はどこだろうか？ フラグは駅の郵便番号（ハイフンなし）を入力して下さい
 e.g. 東京駅の場合は郵便番号が100-0005なのでフラグは &lt;code>TsukuCTF22{1000005}&lt;/code> となります。&lt;/p>

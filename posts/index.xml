@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on passerby1.dev</title><link>https://passerby1.dev/posts/</link><description>Recent content in Posts on passerby1.dev</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>passerby1</copyright><lastBuildDate>Tue, 25 Oct 2022 14:32:27 +0900</lastBuildDate><atom:link href="https://passerby1.dev/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Tsukuctf2022 Writeup</title><link>https://passerby1.dev/posts/tsukuctf2022/</link><pubDate>Tue, 25 Oct 2022 14:32:27 +0900</pubDate><guid>https://passerby1.dev/posts/tsukuctf2022/</guid><description>TsukuCTF 2022 Writeup このブログを建ててから、あまり時間が取れず何も書けていなかったので、気軽にかける内容として先日出たTsukuCTFのWriteupを書いてみました。
 土曜は友人と焼肉を食らう予定があったので、日曜に日付が変わってからの参加となりましたが、1人チームkstmとして出場し、最終的に13位、1人チームでは3位となりました。後から追い上げた割には悪くないかな?
 焼肉
-Attack of Tsukushi (easy) つくしくんはある観光地を調査した際に訪れた駅で写真を撮影した。果たしてこの写真が撮られた駅はどこだろうか？ フラグは駅の郵便番号（ハイフンなし）を入力して下さい e.g. 東京駅の場合は郵便番号が100-0005なのでフラグは TsukuCTF22{1000005} となります。
+友人と家で焼肉をした pic.twitter.com/IesUwBSQCj
+— 通行人1 (@passerby1_) October 22, 2022 Attack of Tsukushi (easy) つくしくんはある観光地を調査した際に訪れた駅で写真を撮影した。果たしてこの写真が撮られた駅はどこだろうか？ フラグは駅の郵便番号（ハイフンなし）を入力して下さい e.g. 東京駅の場合は郵便番号が100-0005なのでフラグは TsukuCTF22{1000005} となります。
 これはGoogle Lensで一発でした。
 JR日田駅 TsukuCTF22{8770013}
 Money (easy) どこ？ フラグは写真が撮影された場所の郵便番号(ハイフンを除く)を入れて下さい。例えば撮影された場所が東京都庁の場合、郵便番号は163-8001なのでTsukuCTF22{1638001}となります。
@@ -19,8 +20,4 @@ https://www.yoakeya1916.com/menu-%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC/
 TsukuCTF22{和チーズケーキ ver.煎茶パウダー}
 sky (easy) 帰ってくるあなたが最高のプレゼント。つくし君は電車にガタゴト揺られています。次の停車駅で降りるようなのですが、どこかわかりますか？ ※フラグの形式はTsukuCTF22{次の停車駅}です。公式サイトの表記を採用します(スペースは含めません)。
 どう見ても名鉄2000/2200の特別車、豊橋行ったときに乗りました。
-外が暗いのはトンネルなのか単純に夜なのか分かりませんが、仮にトンネルとして、かつ、駅名に「名鉄」とついている可能性が高いと思われる問題条件からすると、名鉄名古屋? かなと? 入れてみると正解。
-TsukuCTF22{名鉄名古屋}
-間違ってたら、窓に反射している画面に注目して、コントラスト変えたりして見てたと思います。
-douro (easy) 旅行中のつくし君は迷子になってしまったようです。うつむいています。送られてきた写真から場所を特定できますか？ ※フラグの形式はTsukuCTF22{緯度_経度}です。ただし、緯度経度は十進法で小数点以下五桁目を切り捨てたものとします。
-四隅の一番左下にある文字が手掛かりになりそう。</description></item><item><title>ブログを建てました</title><link>https://passerby1.dev/posts/hello-world/</link><pubDate>Mon, 29 Aug 2022 01:16:35 +0900</pubDate><guid>https://passerby1.dev/posts/hello-world/</guid><description>@passerby1_ です。やっとブログを建てました。 かなり前から作りたかったのですが、変なこだわりを持ってしまって (派手すぎないテーマ, 記事一覧での画像表示,</description></item></channel></rss>
+外が暗いのはトンネルなのか単純に夜なのか分かりませんが、仮にトンネルとして、かつ、駅名に「名鉄」とついている可能性が高いと思われる問題条件からすると、名鉄名古屋? かなと? 入れてみると正解。</description></item><item><title>ブログを建てました</title><link>https://passerby1.dev/posts/hello-world/</link><pubDate>Mon, 29 Aug 2022 01:16:35 +0900</pubDate><guid>https://passerby1.dev/posts/hello-world/</guid><description>@passerby1_ です。やっとブログを建てました。 かなり前から作りたかったのですが、変なこだわりを持ってしまって (派手すぎないテーマ, 記事一覧での画像表示,</description></item></channel></rss>
