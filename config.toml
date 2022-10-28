@@ -18,6 +18,8 @@ theme = "diary"
     noClasses = true
     style = "solarized-dark"
     tabWidth = 4
+  [markup.goldmark.renderer]
+    unsafe = true
 
 [params]
 subtitle = "やっとブログを建てた人"
