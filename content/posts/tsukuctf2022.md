@@ -19,7 +19,7 @@ isCJKLanguage: true
 
 
 
-焼肉
+🍖**焼肉**🍖
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">友人と家で焼肉をした <a  href="https://t.co/IesUwBSQCj">pic.twitter.com/IesUwBSQCj</a></p>— 通行人1 (@passerby1_) <a  href="https://twitter.com/passerby1_/status/1583796883516186626?ref_src=twsrc%5Etfw">October 22, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js"  charset="utf-8"></script> 
 
