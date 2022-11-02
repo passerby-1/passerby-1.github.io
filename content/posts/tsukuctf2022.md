@@ -1,7 +1,14 @@
 ---
 title: "Tsukuctf2022 Writeup"
 date: 2022-10-25T14:32:27+09:00
+description: 先日出場した TsukuCTF2022 の Writeup です。
+tags: 
+  - "CTF"
+  - "Writeup"
+  - "技術"
+  - "OSINT"
 draft: false
+isCJKLanguage: true
 ---
 
 # TsukuCTF 2022 Writeup
