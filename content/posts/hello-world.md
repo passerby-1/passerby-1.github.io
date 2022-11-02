@@ -3,7 +3,6 @@ title: "ブログを建てました"
 date: 2022-08-29T01:16:35+09:00
 lastmod: 2022-08-29T01:16:35+09:00
 description: Hello world!
-categories: 一般
 tags: 
   - "Hugo"
   - "雑多"

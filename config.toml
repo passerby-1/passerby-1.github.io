@@ -60,11 +60,6 @@ pre = ""
 name = "Blog"
 weight = 10
 [[menu.main]]
-url = "/categories"
-pre = ""
-name = "Categories"
-weight = 20
-[[menu.main]]
 url = "/tags"
 pre = ""
 name = "Tags"
