@@ -1,4 +1,157 @@
-<?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>passerby1.dev</title><link>https://passerby1.dev/</link><description>Recent content on passerby1.dev</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>passerby1</copyright><lastBuildDate>Tue, 25 Oct 2022 14:32:27 +0900</lastBuildDate><atom:link href="https://passerby1.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Tsukuctf2022 Writeup</title><link>https://passerby1.dev/posts/tsukuctf2022/</link><pubDate>Tue, 25 Oct 2022 14:32:27 +0900</pubDate><guid>https://passerby1.dev/posts/tsukuctf2022/</guid><description>passerby1.dev https://passerby1.dev/posts/tsukuctf2022/ -&lt;p>このブログを建ててから、あまり時間が取れず何も書けていなかったので、気軽にかける内容として先日出たTsukuCTFのWriteupを書いてみました。&lt;/p>
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>passerby1.dev</title><link>https://passerby1.dev/</link><description>Recent content on passerby1.dev</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>passerby1</copyright><lastBuildDate>Thu, 03 Nov 2022 02:48:56 +0900</lastBuildDate><atom:link href="https://passerby1.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>TrueNAS Core から Scale へ移行した話</title><link>https://passerby1.dev/posts/truenas-scale-vm/</link><pubDate>Thu, 03 Nov 2022 02:48:56 +0900</pubDate><guid>https://passerby1.dev/posts/truenas-scale-vm/</guid><description>passerby1.dev https://passerby1.dev/posts/truenas-scale-vm/ -&lt;p>先日、家で動かしている TrueNAS Core のサーバーを、TrueNAS Scale へアップデート・移行しました。Unix/BSD (FreeBSD) ベースであった TrueNAS Core から Linux (Debian) ベースの TrueNAS Scale へのアップデートでは、UI がより洗練され、jail が消え、docker/k8s のサポートが増え、TrueNAS 公式/非公式のプラグインも様変わりするなど、大きな変化がありました。&lt;/p>
+&lt;p>この記事では、TrueNAS Core =&amp;gt; Scale のアップデート方法や個々の細かいアップデート点については触れませんが、TrueNAS Scale へ移行し感じたメリット、デメリットなどの軽い感想と、移行に伴い、特に VM 関連で調整が必要だった個所への対処方法を、簡単に説明したいと思います。&lt;/p>
+&lt;h2 id="truenas-scale">TrueNAS Scale&lt;/h2>
+&lt;p>TrueNAS は、iXsystems 社が開発している、NAS 向けのオープンソースプログラムの総称です。OSに最初から組み込まれているNAS向けの設定機能に加え、KVMによるVM機能や、プラグイン機能も統合されており、GUIで比較的に楽に、様々な機能を用いることができます。&lt;/p>
+&lt;p>上に書いた通り、本記事では TrueNAS Scale への移行方法や個々の細かいアップデート点については触れません。この辺りについては、公式や以下の記事などを参照。&lt;/p>
+&lt;p>きりしま屋「TrueNAS on Linuxを初公式リリース！（TrueNAS SCALE）」
+&lt;a href="https://kirishima.it/mt/2022/02/truenas_on_linuxtruenas_scale.html">https://kirishima.it/mt/2022/02/truenas_on_linuxtruenas_scale.html&lt;/a>&lt;/p>
+&lt;p>きりしま屋「TrueNAS SCALE に TrueNAS CORE からアップグレードする」
+&lt;a href="https://kirishima.it/mt/2022/02/migrating_from_truenascore.html">https://kirishima.it/mt/2022/02/migrating_from_truenascore.html&lt;/a>&lt;/p>
+&lt;p>私の自宅では、HPE Proliant ML30 Gen9 (Xeon E3-1220v5、RAM32GB、SSD120GB (OS) + SSD 500GB + HDD4TB + 4TB + 2TB) の 1 台で、NextCloud や wikijs、GitLab、録画関連サービス、その他こまごましたサービスを動かし、Cloudflare Tunnel を用いて、インターネット上からのアクセスもできるようにしていました。(Scale への移行後、再構築中なので過去形)&lt;/p>
+&lt;p>今回、TrueNAS Scale への移行をした理由については、主に docker のサポートが欲しかった、プラグインが多そうなのを試してみたかった、Unix より Linux の方が慣れている、もっと色々システムをいじくる前に移行したほうが再構築のダメージが少ない といった理由です。OS の移行作業はパスワードを再設定する作業しかない位の楽さで、動作も早く快適で、現状大きな不具合も無く、docker/k8s ベースのプラグイン機能も以前のプラグインより充実していて、大方満足しています。しかし、非公式プラグインの充実から来る? 公式プラグインの若干の不足と、非公式プラグインのドキュメント不足など、期待と異なる部分も一部ありました。下に、個人的なメリット・デメリットをまとめたので、参考にしてください。&lt;/p>
+&lt;h3 id="truenas-scale-移行のメリットデメリット">TrueNAS Scale 移行のメリット・デメリット&lt;/h3>
+&lt;h4 id="メリット">メリット&lt;/h4>
+&lt;ul>
+&lt;li>BSD/Unix に慣れていない人でも設定しやすい
+&lt;ul>
+&lt;li>特にプラグイン周りで jail に触りたくない人&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>非公式プラグインが充実している&lt;/li>
+&lt;li>docker/k8s で何でも (*もしかしたら例外があるかも) 動かせる
+&lt;ul>
+&lt;li>FreeBSD / jail よりも圧倒的に情報量が多いので問題解決が楽&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>TrueNAS Core の UI 上からほぼワンクリックでの移行が可能&lt;/li>
+&lt;li>今後恐らく主流となるのはこっち&lt;/li>
+&lt;/ul>
+&lt;h4 id="デメリット">デメリット&lt;/h4>
+&lt;ul>
+&lt;li>Core のプラグイン、FreeBSD jail でサービスを動かしていた場合、直接の移行はできずデータが消えることになる (サービスが消えるだけで、ストレージ上・NAS のデータは消えない)
+&lt;ul>
+&lt;li>NextCloud、GitLab、Plex などのプラグインのデータはすべて消える&lt;/li>
+&lt;li>設定ファイル等をエクスポートして、再度環境を作り直してインポートする等できたら比較的楽&lt;/li>
+&lt;li>環境作り直しの気力&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>公式の安定した GitLab プラグインが無い (Core では存在した、ワンクリックインストールの公式プラグインが消えた)
+&lt;ul>
+&lt;li>現時点で非公式プラグインも無い (docker や VM を建てて自分で入れることは可能)&lt;/li>
+&lt;li>GitLab に限って研究室レベルで (インフラをあまり触っていない学生が) ポンと建てるハードルは上がったかも?&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>非公式プラグインの動作が不安定
+&lt;ul>
+&lt;li>説明通りにやっても動かなかったりする&lt;/li>
+&lt;li>自分の理解不足かもしれない&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>非公式プラグインのドキュメントが少ない
+&lt;ul>
+&lt;li>ので、結局色々試して自己解決する / 諦めて VM を建てることになる&lt;/li>
+&lt;li>試してダメだった非公式プラグインの更新を待つ / 並行して試すのが無難?&lt;/li>
+&lt;li>人気のプラグインの問題は少ない&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="truenas-scale-への移行に伴う-vm-の調整">TrueNAS Scale への移行に伴う VM の調整&lt;/h2>
+&lt;p>TrueNAS の Virtual Machines 機能は、KVM による仮想化であるため、jail と異なり移行後もそのまま利用が可能です。しかし、移行に伴って NIC の名前が変わったり、今までできていた (?) (Core の方では自然に利用出来ていたが、細かい条件で検証していないので詳細は不明)、ホスト OS - ゲスト OS 間通信がそのままではできないなど、若干の調整が必要な個所がありました。&lt;/p>
+&lt;p>原因を考えてみれば当たり前な部分もありますが、今後移行する人の役に立つと思うので、以下の2点について若干のメモを残しておきます。&lt;/p>
+&lt;ul>
+&lt;li>ネットワーク名の変更に伴う修正 (Ubuntu VM)&lt;/li>
+&lt;li>ブリッジの設定 (Cloudflare Tunnel や、VM 内からNFS・SMB等でTrueNASのストレージを見に行きたい時に必要)&lt;/li>
+&lt;/ul>
+&lt;h4 id="ネットワーク名の変更に伴う修正-ubuntu-vm">ネットワーク名の変更に伴う修正 (Ubuntu VM)&lt;/h4>
+&lt;p>OS の移行に伴い、&lt;code>eth0&lt;/code> や &lt;code>enp0s3&lt;/code>、&lt;code>wlan1&lt;/code>、など自動で名づけられたネットワーク名が変わっていることがあります。私の場合、移行により NIC のネットワーク名が &lt;code>enp0s4&lt;/code> から &lt;code>eno1&lt;/code> になった結果、VMの起動時にエラーが発生しました。以下の説明は、&lt;code>/etc/netplan/&lt;/code> 内の設定ファイルに、IP アドレスを固定する設定を書いているケースなので、DHCP で動的に IP アドレスを割り当てている場合には若干変わるかもしれません。&lt;/p>
+&lt;ol>
+&lt;li>Virtual Machines &amp;gt; 当該のVM &amp;gt; Devices から、NIC デバイスの設定を開く&lt;img src="https://passerby1.dev/images/202211/truenas-scale-vm/vm-nic1.png" alt="vm-nic1">&lt;/li>
+&lt;li>&amp;ldquo;Nic to attach&amp;rdquo; 設定の NIC を、現在使用しているものに設定し、Save する&lt;img src="https://passerby1.dev/images/202211/truenas-scale-vm/vm-nic2.png" alt="vm-nic2">&lt;/li>
+&lt;li>この段階で、VM 起動時のエラーが消え、VMが起動できるようになりますが、まだゲスト OS 側の修正が必要です。起動後 VNC でゲスト OS に入ります。(まだゲスト OS がネットワークに繋がっていないため、TrueNAS の noVNC 以外、ssh や RDP でのアクセスはできません。)&lt;/li>
+&lt;li>ゲスト OS からインターネット上の適当なホスト (&lt;code>1.1.1.1&lt;/code> など) に ping を送り、Network is unreachable エラーとなることを確認します (この時点で解決していた場合、この後の作業は不要です。)&lt;/li>
+&lt;li>&lt;code>ip a&lt;/code> などで、ゲスト OS マシン上の NIC 名を確認します (&lt;code>ens3&lt;/code> など)&lt;/li>
+&lt;li>&lt;code>cd /etc/netplan&lt;/code>
+&lt;ol>
+&lt;li>&lt;code>00-installer-config.yaml&lt;/code> や、自分で書いたネットワーク設定の &lt;code>.yaml&lt;/code> ファイルを、sudo をつけて好きなエディタで開きます&lt;/li>
+&lt;li>以前のネットワーク名で書かれている設定部分を、&lt;code>ip a&lt;/code> コマンドで確認したネットワーク名に書き換えて保存します (&lt;code>enp0s4&lt;/code> を &lt;code>ens3&lt;/code> に書き換えるなど)&lt;/li>
+&lt;li>&lt;code>sudo netplan apply&lt;/code> で適用します&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>インターネット上の適当なホストに ping が届くようになっていることを確認します&lt;/li>
+&lt;/ol>
+&lt;h4 id="ブリッジの設定-cloudflare-tunnel-やvm-内からnfssmb等でtruenasのストレージを見に行きたい時に必要">ブリッジの設定 (Cloudflare Tunnel や、VM 内からNFS・SMB等でTrueNASのストレージを見に行きたい時に必要)&lt;/h4>
+&lt;p>「&lt;strong>ネットワーク名の変更に伴う修正 (Ubuntu VM)&lt;/strong>」によって、ゲスト OS が再びネットワークの一部となりました。ここで、ゲスト OS からホスト OS (TrueNAS Scale) マシンの IP アドレスへ ping を送ってみましょう。また、逆にホスト OS の Shell からゲスト OS へ ping を送ってあげましょう。あれ? 繋がらない?&lt;/p>
+&lt;p>ここでホストOS - ゲスト OS 間の通信ができないのは、KVM の仕様です。詳しくは末尾の参考ページを参照。&lt;/p>
+&lt;p>これもブリッジを作るだけで解決するので、やってしまいましょう。&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>ホスト OS (TrueNAS Scale) の Network 設定を開き、Interfaces &amp;gt; Add を選択します。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Add Interface メニューが出てくるので、&lt;/p>
+&lt;ol>
+&lt;li>Interface Settings
+Type: &lt;code>Bridge&lt;/code>
+Name: &lt;code>br(数字)&lt;/code>
+Description: &lt;code>適当な説明&lt;/code>&lt;/li>
+&lt;li>IP Addresses 設定から、Add をクリックし、ホストと異なるサブネットの IP アドレスを設定します (私の場合、ホストOS の繋がっているネットワークが &lt;code>192.168.100/24&lt;/code> なので、適当に &lt;code>192.168.101.1/24&lt;/code> と入力)&lt;/li>
+&lt;/ol>
+&lt;p>と選択・入力し、Apply をクリック&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Apply をクリックした後、Network 設定ページ上部に、&lt;/p>
+&lt;blockquote>
+&lt;p>There are unapplied network interface changes that must be tested before being permanently saved. Test changes now?&lt;/p>
+&lt;p>Test network interface changes for 60 seconds.
+[Test Changes] [Revert Changes]&lt;/p>
+&lt;/blockquote>
+&lt;p>と、出てくるので、Test Changesをクリック、ホップアップから Confirm =&amp;gt; TEST CHANGES&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>一次的にネットワークの設定が有効化されるので、NAS へのアクセスが通常通りできることを確認した後、Save Changes をクリックし、設定の変更を永続化します (放置した場合元の設定に戻される)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>ホストOS とのアクセスを行いたい / ホスト OS からアクセスしたい ゲスト OS の Devices 設定 &amp;gt; Add から、Type: &lt;code>NIC&lt;/code>、Nic to attach: &lt;code>(先ほど作ったbridge)&lt;/code> のデバイスを作り、Save します
+&lt;img src="https://passerby1.dev/images/202211/truenas-scale-vm/br-nic1.png" alt="br-nic1">&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>VM を再起動し、&lt;code>ip a&lt;/code> などで &lt;code>ens4&lt;/code> などの名前の新しいネットワークが増えていることを確認します (ここでの MAC アドレスは Devices 設定での MAC アドレスと同じです)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>cd /etc/netplan&lt;/code>&lt;/p>
+&lt;ol>
+&lt;li>「&lt;strong>ネットワーク名の変更に伴う修正 (Ubuntu VM)&lt;/strong>」と同様、設定ファイルを開き、新たに増えたネットワークの経路を追記します。netplan はいくつかの書き方ができるため、どこを追記すればよいかは自分の現在の設定をみながら調べてください。以下は、私のケースの設定内容です。(&lt;code>ens3&lt;/code> はプライベートな固定 IP のインターネットへつながるネットワーク、&lt;code>ens4&lt;/code> が今回追記した経路)
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">network&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">version&lt;/span>: &lt;span style="color:#2aa198">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">renderer&lt;/span>: networkd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">ethernets&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">ens3&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">addresses&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#2aa198">192.168.100.17&lt;/span>/24
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">nameservers&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">addresses&lt;/span>: [&lt;span style="color:#2aa198">192.168.100.1&lt;/span>]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">routes&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#268bd2">to&lt;/span>: default
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">via&lt;/span>: &lt;span style="color:#2aa198">192.168.100.1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">ens4&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">addresses&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#2aa198">192.168.101.2&lt;/span>/24
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">routes&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#268bd2">to&lt;/span>: &lt;span style="color:#2aa198">192.168.101.1&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>これで、ホスト OS (TrueNAS Scale) 側は 192.168.101.1、ゲスト OS は 192.168.101.2 としてお互いにアクセスできるようになりました&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>この設定は VM に Cloudflared (Cloudflare Tunnel) を建て、ホスト OS の TrueNAS Scale のコントロールパネルへアクセスできるようにしたい場合などにこの設定が必要です。Cloudflare Tunnel は便利なので、紹介の記事・競合との比較をやってみたいですが、それはまたの機会に。&lt;/p>
+&lt;p>参考記事:&lt;/p>
+&lt;p>FUROR TEUTONICUS &amp;ldquo;Enabling host-guest networking with KVM, Macvlan and Macvtap&amp;rdquo;
+&lt;a href="https://www.furorteutonicus.eu/2013/08/04/enabling-host-guest-networking-with-kvm-macvlan-and-macvtap/">https://www.furorteutonicus.eu/2013/08/04/enabling-host-guest-networking-with-kvm-macvlan-and-macvtap/&lt;/a>&lt;/p>
+&lt;p>Qiita @exthenet「TrueNASのVM利用時のホストとのストレージ共有の話」
+&lt;a href="https://qiita.com/exthnet/items/d2905f0366340b1b4616">https://qiita.com/exthnet/items/d2905f0366340b1b4616&lt;/a>&lt;/p>
+- https://passerby1.dev/posts/truenas-scale-vm/ - passerby1</description></item><item><title>Tsukuctf2022 Writeup</title><link>https://passerby1.dev/posts/tsukuctf2022/</link><pubDate>Tue, 25 Oct 2022 14:32:27 +0900</pubDate><guid>https://passerby1.dev/posts/tsukuctf2022/</guid><description>passerby1.dev https://passerby1.dev/posts/tsukuctf2022/ -&lt;p>このブログを建ててから、あまり時間が取れず何も書けていなかったので、気軽にかける内容として先日出たTsukuCTFのWriteupを書いてみました。&lt;/p>
 &lt;p>土曜は友人と焼肉を食らう予定があったので、日曜に日付が変わってからの参加となりましたが、1人チームkstmとして出場し、最終的に13位、1人チームでは3位となりました。後から追い上げた割には悪くないかな?&lt;/p>
 &lt;p>🍖&lt;strong>焼肉&lt;/strong>🍖&lt;/p>
 &lt;blockquote class="twitter-tweet">&lt;p lang="ja" dir="ltr">友人と家で焼肉をした &lt;a href="https://t.co/IesUwBSQCj">pic.twitter.com/IesUwBSQCj&lt;/a>&lt;/p>— 通行人1 (@passerby1_) &lt;a href="https://twitter.com/passerby1_/status/1583796883516186626?ref_src=twsrc%5Etfw">October 22, 2022&lt;/a>&lt;/blockquote> &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
