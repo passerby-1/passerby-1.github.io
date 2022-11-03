@@ -1,7 +1,7 @@
-<?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>passerby1.dev</title><link>https://passerby1.dev/</link><description>Recent content on passerby1.dev</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>passerby1</copyright><lastBuildDate>Thu, 03 Nov 2022 02:48:56 +0900</lastBuildDate><atom:link href="https://passerby1.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>TrueNAS Core から Scale へ移行した話</title><link>https://passerby1.dev/posts/truenas-scale-vm/</link><pubDate>Thu, 03 Nov 2022 02:48:56 +0900</pubDate><guid>https://passerby1.dev/posts/truenas-scale-vm/</guid><description>passerby1.dev https://passerby1.dev/posts/truenas-scale-vm/ -&lt;p>先日、家で動かしている TrueNAS Core のサーバーを、TrueNAS Scale へアップデート・移行しました。Unix/BSD (FreeBSD) ベースであった TrueNAS Core から Linux (Debian) ベースの TrueNAS Scale へのアップデートでは、UI がより洗練され、jail が消え、docker/k8s のサポートが増え、TrueNAS 公式/非公式のプラグインも様変わりするなど、大きな変化がありました。&lt;/p>
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>passerby1.dev</title><link>https://passerby1.dev/</link><description>Recent content on passerby1.dev</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>passerby1</copyright><lastBuildDate>Thu, 03 Nov 2022 02:48:56 +0900</lastBuildDate><atom:link href="https://passerby1.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>TrueNAS Core から Scale へ移行した話</title><link>https://passerby1.dev/posts/truenas-scale-vm/</link><pubDate>Thu, 03 Nov 2022 02:48:56 +0900</pubDate><guid>https://passerby1.dev/posts/truenas-scale-vm/</guid><description>passerby1.dev https://passerby1.dev/posts/truenas-scale-vm/ -&lt;p>先日、家で動かしている TrueNAS Core (旧 FreeNAS) のサーバーを、TrueNAS Scale へアップデート・移行しました。Unix/BSD (FreeBSD) ベースであった TrueNAS Core から Linux (Debian) ベースの TrueNAS Scale へのアップデートでは、UI がより洗練され、jail が消え、docker/k8s のサポートが増え、TrueNAS 公式/非公式のプラグインも様変わりするなど、大きな変化がありました。&lt;/p>
 &lt;p>この記事では、TrueNAS Core =&amp;gt; Scale のアップデート方法や個々の細かいアップデート点については触れませんが、TrueNAS Scale へ移行し感じたメリット、デメリットなどの軽い感想と、移行に伴い、特に VM 関連で調整が必要だった個所への対処方法を、簡単に説明したいと思います。&lt;/p>
 &lt;h2 id="truenas-scale">TrueNAS Scale&lt;/h2>
-&lt;p>TrueNAS は、iXsystems 社が開発している、NAS 向けのオープンソースプログラムの総称です。OSに最初から組み込まれているNAS向けの設定機能に加え、KVMによるVM機能や、プラグイン機能も統合されており、GUIで比較的に楽に、様々な機能を用いることができます。&lt;/p>
+&lt;p>TrueNAS は、iXsystems 社が開発している、NAS 向けのオープンソースプログラムの総称です。OSに最初から組み込まれているNAS向けの設定機能に加え、KVM による VM 機能や、プラグイン機能も統合されており、GUI で比較的に楽に、様々な機能を用いることができます。&lt;/p>
 &lt;p>上に書いた通り、本記事では TrueNAS Scale への移行方法や個々の細かいアップデート点については触れません。この辺りについては、公式や以下の記事などを参照。&lt;/p>
 &lt;p>きりしま屋「TrueNAS on Linuxを初公式リリース！（TrueNAS SCALE）」
 &lt;a href="https://kirishima.it/mt/2022/02/truenas_on_linuxtruenas_scale.html">https://kirishima.it/mt/2022/02/truenas_on_linuxtruenas_scale.html&lt;/a>&lt;/p>
@@ -67,7 +67,7 @@
 &lt;ol>
 &lt;li>Virtual Machines &amp;gt; 当該のVM &amp;gt; Devices から、NIC デバイスの設定を開く&lt;img src="https://passerby1.dev/images/202211/truenas-scale-vm/vm-nic1.png" alt="vm-nic1">&lt;/li>
 &lt;li>&amp;ldquo;Nic to attach&amp;rdquo; 設定の NIC を、現在使用しているものに設定し、Save する&lt;img src="https://passerby1.dev/images/202211/truenas-scale-vm/vm-nic2.png" alt="vm-nic2">&lt;/li>
-&lt;li>この段階で、VM 起動時のエラーが消え、VMが起動できるようになりますが、まだゲスト OS 側の修正が必要です。起動後 VNC でゲスト OS に入ります。(まだゲスト OS がネットワークに繋がっていないため、TrueNAS の noVNC 以外、ssh や RDP でのアクセスはできません。)&lt;/li>
+&lt;li>この時点で VM 起動時のエラーが消え、VM を起動できるようになりますが、まだゲスト OS 側の修正が必要です。起動後 VNC でゲスト OS に入ります。(まだゲスト OS がネットワークに繋がっていないため、TrueNAS の noVNC 以外の手段、ssh や RDP でのアクセスはできません。)&lt;/li>
 &lt;li>ゲスト OS からインターネット上の適当なホスト (&lt;code>1.1.1.1&lt;/code> など) に ping を送り、Network is unreachable エラーとなることを確認します (この時点で解決していた場合、この後の作業は不要です。)&lt;/li>
 &lt;li>&lt;code>ip a&lt;/code> などで、ゲスト OS マシン上の NIC 名を確認します (&lt;code>ens3&lt;/code> など)&lt;/li>
 &lt;li>&lt;code>cd /etc/netplan&lt;/code>
@@ -90,10 +90,10 @@
 &lt;li>
 &lt;p>Add Interface メニューが出てくるので、&lt;/p>
 &lt;ol>
-&lt;li>Interface Settings
-Type: &lt;code>Bridge&lt;/code>
-Name: &lt;code>br(数字)&lt;/code>
-Description: &lt;code>適当な説明&lt;/code>&lt;/li>
+&lt;li>Interface Settings&lt;br>
+Type: &lt;code>Bridge&lt;/code>&lt;br>
+Name: &lt;code>br(数字)&lt;/code>&lt;br>
+Description: &lt;code>適当な説明 &lt;/code>&lt;/li>
 &lt;li>IP Addresses 設定から、Add をクリックし、ホストと異なるサブネットの IP アドレスを設定します (私の場合、ホストOS の繋がっているネットワークが &lt;code>192.168.100/24&lt;/code> なので、適当に &lt;code>192.168.101.1/24&lt;/code> と入力)&lt;/li>
 &lt;/ol>
 &lt;p>と選択・入力し、Apply をクリック&lt;/p>
@@ -108,7 +108,7 @@ Description: &lt;code>適当な説明&lt;/code>&lt;/li>
 &lt;p>と、出てくるので、Test Changesをクリック、ホップアップから Confirm =&amp;gt; TEST CHANGES&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>一次的にネットワークの設定が有効化されるので、NAS へのアクセスが通常通りできることを確認した後、Save Changes をクリックし、設定の変更を永続化します (放置した場合元の設定に戻される)&lt;/p>
+&lt;p>一時的にネットワークの設定が有効化されるので、NAS へのアクセスが通常通りできることを確認した後、Save Changes をクリックし、設定の変更を永続化します (放置した場合元の設定に戻される)&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>ホストOS とのアクセスを行いたい / ホスト OS からアクセスしたい ゲスト OS の Devices 設定 &amp;gt; Add から、Type: &lt;code>NIC&lt;/code>、Nic to attach: &lt;code>(先ほど作ったbridge)&lt;/code> のデバイスを作り、Save します
@@ -145,7 +145,7 @@ Description: &lt;code>適当な説明&lt;/code>&lt;/li>
 &lt;p>これで、ホスト OS (TrueNAS Scale) 側は 192.168.101.1、ゲスト OS は 192.168.101.2 としてお互いにアクセスできるようになりました&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;p>この設定は VM に Cloudflared (Cloudflare Tunnel) を建て、ホスト OS の TrueNAS Scale のコントロールパネルへアクセスできるようにしたい場合などにこの設定が必要です。Cloudflare Tunnel は便利なので、紹介の記事・競合との比較をやってみたいですが、それはまたの機会に。&lt;/p>
+&lt;p>この設定は VM に Cloudflared (Cloudflare Tunnel) を建て、ホスト OS の TrueNAS Scale のコントロールパネルへアクセスできるようにしたい場合などに必要です。Cloudflare Tunnel は便利なので、紹介の記事・競合との比較をやってみたいですが、それはまたの機会に。&lt;/p>
 &lt;p>参考記事:&lt;/p>
 &lt;p>FUROR TEUTONICUS &amp;ldquo;Enabling host-guest networking with KVM, Macvlan and Macvtap&amp;rdquo;
 &lt;a href="https://www.furorteutonicus.eu/2013/08/04/enabling-host-guest-networking-with-kvm-macvlan-and-macvtap/">https://www.furorteutonicus.eu/2013/08/04/enabling-host-guest-networking-with-kvm-macvlan-and-macvtap/&lt;/a>&lt;/p>
