@@ -13,7 +13,7 @@ draft: false
 isCJKLanguage: true
 ---
 
-先日、家で動かしている TrueNAS Core のサーバーを、TrueNAS Scale へアップデート・移行しました。Unix/BSD (FreeBSD) ベースであった TrueNAS Core から Linux (Debian) ベースの TrueNAS Scale へのアップデートでは、UI がより洗練され、jail が消え、docker/k8s のサポートが増え、TrueNAS 公式/非公式のプラグインも様変わりするなど、大きな変化がありました。
+先日、家で動かしている TrueNAS Core (旧 FreeNAS) のサーバーを、TrueNAS Scale へアップデート・移行しました。Unix/BSD (FreeBSD) ベースであった TrueNAS Core から Linux (Debian) ベースの TrueNAS Scale へのアップデートでは、UI がより洗練され、jail が消え、docker/k8s のサポートが増え、TrueNAS 公式/非公式のプラグインも様変わりするなど、大きな変化がありました。
 
 この記事では、TrueNAS Core => Scale のアップデート方法や個々の細かいアップデート点については触れませんが、TrueNAS Scale へ移行し感じたメリット、デメリットなどの軽い感想と、移行に伴い、特に VM 関連で調整が必要だった個所への対処方法を、簡単に説明したいと思います。
 
@@ -21,7 +21,7 @@ isCJKLanguage: true
 
 ## TrueNAS Scale
 
-TrueNAS は、iXsystems 社が開発している、NAS 向けのオープンソースプログラムの総称です。OSに最初から組み込まれているNAS向けの設定機能に加え、KVMによるVM機能や、プラグイン機能も統合されており、GUIで比較的に楽に、様々な機能を用いることができます。
+TrueNAS は、iXsystems 社が開発している、NAS 向けのオープンソースプログラムの総称です。OSに最初から組み込まれているNAS向けの設定機能に加え、KVM による VM 機能や、プラグイン機能も統合されており、GUI で比較的に楽に、様々な機能を用いることができます。
 
 
 
@@ -89,7 +89,7 @@ OS の移行に伴い、`eth0` や `enp0s3`、`wlan1`、など自動で名づけ
 
 1. Virtual Machines > 当該のVM > Devices から、NIC デバイスの設定を開く![vm-nic1](/images/202211/truenas-scale-vm/vm-nic1.png)
 2. "Nic to attach" 設定の NIC を、現在使用しているものに設定し、Save する![vm-nic2](/images/202211/truenas-scale-vm/vm-nic2.png)
-3. この段階で、VM 起動時のエラーが消え、VMが起動できるようになりますが、まだゲスト OS 側の修正が必要です。起動後 VNC でゲスト OS に入ります。(まだゲスト OS がネットワークに繋がっていないため、TrueNAS の noVNC 以外、ssh や RDP でのアクセスはできません。)
+3. この時点で VM 起動時のエラーが消え、VM を起動できるようになりますが、まだゲスト OS 側の修正が必要です。起動後 VNC でゲスト OS に入ります。(まだゲスト OS がネットワークに繋がっていないため、TrueNAS の noVNC 以外の手段、ssh や RDP でのアクセスはできません。)
 4. ゲスト OS からインターネット上の適当なホスト (`1.1.1.1` など) に ping を送り、Network is unreachable エラーとなることを確認します (この時点で解決していた場合、この後の作業は不要です。)
 5. `ip a` などで、ゲスト OS マシン上の NIC 名を確認します (`ens3` など)
 6. `cd /etc/netplan`
@@ -112,24 +112,24 @@ OS の移行に伴い、`eth0` や `enp0s3`、`wlan1`、など自動で名づけ
 
 2. Add Interface メニューが出てくるので、
 
-   1. Interface Settings
-          Type: `Bridge`
-          Name: `br(数字)`
-          Description: `適当な説明`
+   1. Interface Settings  
+          Type: `Bridge`  
+          Name: `br(数字)`  
+          Description: `適当な説明 ` 
    2. IP Addresses 設定から、Add をクリックし、ホストと異なるサブネットの IP アドレスを設定します (私の場合、ホストOS の繋がっているネットワークが `192.168.100/24` なので、適当に `192.168.101.1/24` と入力)
 
    と選択・入力し、Apply をクリック
 
 3. Apply をクリックした後、Network 設定ページ上部に、
 
-   > There are unapplied network interface changes that must be tested before being permanently saved. Test changes now? 
+   > There are unapplied network interface changes that must be tested before being permanently saved. Test changes now?
    >
    > Test network interface changes for 60 seconds. 
    > [Test Changes] [Revert Changes]
 
    と、出てくるので、Test Changesをクリック、ホップアップから Confirm => TEST CHANGES
 
-4. 一次的にネットワークの設定が有効化されるので、NAS へのアクセスが通常通りできることを確認した後、Save Changes をクリックし、設定の変更を永続化します (放置した場合元の設定に戻される)
+4. 一時的にネットワークの設定が有効化されるので、NAS へのアクセスが通常通りできることを確認した後、Save Changes をクリックし、設定の変更を永続化します (放置した場合元の設定に戻される)
 
 5. ホストOS とのアクセスを行いたい / ホスト OS からアクセスしたい ゲスト OS の Devices 設定 > Add から、Type: `NIC`、Nic to attach: `(先ほど作ったbridge)` のデバイスを作り、Save します
    ![br-nic1](/images/202211/truenas-scale-vm/br-nic1.png)
@@ -163,7 +163,7 @@ OS の移行に伴い、`eth0` や `enp0s3`、`wlan1`、など自動で名づけ
 
 
 
-この設定は VM に Cloudflared (Cloudflare Tunnel) を建て、ホスト OS の TrueNAS Scale のコントロールパネルへアクセスできるようにしたい場合などにこの設定が必要です。Cloudflare Tunnel は便利なので、紹介の記事・競合との比較をやってみたいですが、それはまたの機会に。
+この設定は VM に Cloudflared (Cloudflare Tunnel) を建て、ホスト OS の TrueNAS Scale のコントロールパネルへアクセスできるようにしたい場合などに必要です。Cloudflare Tunnel は便利なので、紹介の記事・競合との比較をやってみたいですが、それはまたの機会に。
 
 
 
