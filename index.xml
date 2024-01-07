@@ -510,12 +510,8 @@ Preferred-Languages: ja, en
 &lt;/ul>
 - https://passerby1.dev/posts/tsukuctf2022/ - passerby1</description></item><item><title>Portfolio</title><link>https://passerby1.dev/portfolio/</link><pubDate>Mon, 29 Aug 2022 01:33:37 +0900</pubDate><guid>https://passerby1.dev/portfolio/</guid><description>passerby1.dev https://passerby1.dev/portfolio/ -&lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;ul>
-&lt;li>信州大学 工学部 電子情報システム工学科 4年生
-&lt;ul>
-&lt;li>2023年度より就職予定&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>セキュリティキャンプ全国大会 2021 Bトラック修了&lt;/li>
+&lt;li>デジタルな公務員1年生&lt;/li>
+&lt;li>放送大学教養学部教養学科所属&lt;/li>
 &lt;/ul>
 &lt;h2 id="license--certification">License / Certification&lt;/h2>
 &lt;p>括弧内は証書等記載の認定日&lt;/p>
@@ -526,35 +522,58 @@ Preferred-Languages: ja, en
 &lt;li>TOEIC L&amp;amp;R 950 点 (2022-01)&lt;/li>
 &lt;li>TOEFL MyBest Score 86 点 (2022-05)&lt;/li>
 &lt;li>第三級アマチュア無線技士 (2021-10)&lt;/li>
+&lt;li>セキュリティキャンプ全国大会 2021 Bトラック修了&lt;/li>
+&lt;li>信州大学工学部電子情報システム工学科情報システムプログラム修了 (2023-03)
+&lt;ul>
+&lt;li>学士（工学）&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;/ul>
 &lt;h2 id="skills">Skills&lt;/h2>
 &lt;ul>
 &lt;li>基本的な Linux 操作
 &lt;ul>
 &lt;li>ArchLinux をメインのノート PC として使用する程度&lt;/li>
+&lt;li>何かを動かしたいときとりあえず自宅オンプレが第一の選択肢になる程度&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>技術文書の読解・記述&lt;/li>
-&lt;li>法律文書の読解&lt;/li>
+&lt;li>技術文書の読解・記述
+&lt;ul>
+&lt;li>公式のマニュアルを読み理解してトラブルシューティングができる程度&lt;/li>
+&lt;li>業務としてマニュアルを書く程度&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>法律文書の読解
+&lt;ul>
+&lt;li>逐条解説を読み理解することが苦にならない（大抵の場合）程度&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;li>分野問わずコンピュータ技術全般の広く&amp;quot;浅い&amp;quot;理解&lt;/li>
 &lt;li>若干の C, Golang, Python プログラミング&lt;/li>
 &lt;/ul>
 &lt;h2 id="interest">Interest&lt;/h2>
 &lt;ul>
+&lt;li>Privacy / Identity / Security
+&lt;ul>
+&lt;li>特に分野を指定せず全般&lt;/li>
 &lt;li>FIDO / WebAuthn 周りの認証技術&lt;/li>
-&lt;li>情報セキュリティ全般&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;li>コンピュータ・サイエンス分野の全ての分野・レイヤの繋がりを理解・説明できるようになりたい
 &lt;ul>
 &lt;li>半導体、CPUのアーキテクチャから機械語、アセンブラ、コンパイラ、OS……フロント分野までの繋がり&lt;/li>
 &lt;li>アルゴリズム、オートマトン、画像処理などの、それを支えるアーキテクチャ&lt;/li>
 &lt;/ul>
 &lt;/li>
+&lt;li>インフラ分野全般&lt;/li>
 &lt;/ul>
 &lt;h2 id="experiences">Experiences&lt;/h2>
 &lt;ul>
-&lt;li>国内某レンタルサーバ事業者 カスタマーサポート (現)&lt;/li>
-&lt;li>Psychic VR Lab カスタマーサクセスチーム 翻訳担当 (現)&lt;/li>
+&lt;li>某省庁デジタル区分採用ののちいろいろ（現）&lt;/li>
+&lt;li>国内某レンタルサーバ事業者 カスタマーサポート&lt;/li>
+&lt;li>Psychic VR Lab カスタマーサクセスチーム 翻訳担当&lt;/li>
 &lt;li>某一般社団法人受託、総務省委託調査における専門家チーム&lt;/li>
+&lt;li>その他、技術翻訳、イベントスタッフ、選挙出口調査スタッフ 等&lt;/li>
 &lt;/ul>
 &lt;h3 id="intern">Intern&lt;/h3>
 &lt;ul>
@@ -576,7 +595,7 @@ Preferred-Languages: ja, en
 &lt;/li>
 &lt;li>Discord DM
 &lt;ul>
-&lt;li>passerby1_#1111&lt;/li>
+&lt;li>passerby1_&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>mail
@@ -590,7 +609,6 @@ Preferred-Languages: ja, en
 &lt;ul>
 &lt;li>passerby1.dev&lt;/li>
 &lt;li>passerby1.cloud&lt;/li>
-&lt;li>kstm.su&lt;/li>
 &lt;li>gugureka.su&lt;/li>
 &lt;/ul>
 &lt;h2 id="license">License&lt;/h2>
