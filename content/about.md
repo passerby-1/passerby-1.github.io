@@ -13,7 +13,7 @@ isCJKLanguage: false
 * twitter DM
   * [@passerby1_](https://twitter.com/passerby1_)
 * Discord DM
-  * passerby1_#1111
+  * passerby1_
 * mail
   * contact \[%AT%\] passerby1.dev
 
@@ -21,7 +21,6 @@ isCJKLanguage: false
 以下のドメイン名に関する問題等ありましたら、上記連絡先までご連絡ください。
 * passerby1.dev
 * passerby1.cloud
-* kstm.su
 * gugureka.su
 
 ## License
