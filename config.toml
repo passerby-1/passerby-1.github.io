@@ -82,15 +82,15 @@ weight = 40
 [[menu.main]]
 url = "https://twitter.com/passerby1_"
 pre = "<i class='fab fa-twitter'></i>"
-name = "&#x200B" # Zero Width Space
+name = "𝕏"
 weight = 50
+[[menu.main]]
+url = "https://bsky.app/profile/passerby1.dev"
+pre = ""
+name = "Bluesky"
+weight = 55
 [[menu.main]]
 url = "https://github.com/passerby-1"
 pre = "<i class='fab fa-github'></i>"
-name = "&#xFEFF" # Zero Width No-Break Space 
+name = ""
 weight = 60
-[[menu.main]]
-url = "https://amzn.passerby1.dev"
-pre = "<i class='fab fa-amazon'></i>"
-name = "Wishlist"
-weight = 70
