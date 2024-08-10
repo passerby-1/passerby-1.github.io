@@ -8,7 +8,7 @@ isCJKLanguage: true
 
 ## Introduction
 
-* デジタルな公務員1年生
+* デジタルな公務員2年生
 * 放送大学教養学部教養学科所属
 
 ## License / Certification
