@@ -1,7 +1,7 @@
 baseURL = "https://passerby1.dev/"
 publishDir = "docs"
 DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, zh-hant
-languageCode = "ja-jp"
+languageCode = "ja-JP"
 title = "passerby1.dev"
 copyright = "passerby1"
 theme = "diary"
