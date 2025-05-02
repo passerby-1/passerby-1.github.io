@@ -21,7 +21,6 @@ isCJKLanguage: false
 以下のドメイン名に関する問題等ありましたら、上記連絡先までご連絡ください。
 * passerby1.dev
 * passerby1.cloud
-* gugureka.su
 
 ## License
 本ウェブサイト上のコンテンツは、フリー素材元や引用元の表記を行っているものを除き、[Creative Commons「表示 - 継承 4.0 国際 (CC BY-SA 4.0)」ライセンス](http://creativecommons.org/licenses/by-sa/4.0/)にて公開されています。
