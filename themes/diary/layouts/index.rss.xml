@@ -13,7 +13,7 @@
     {{ with .OutputFormats.Get "RSS" }}
         {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end }}
-    {{ range .Paginator.Pages }}
+    {{ range first 20 .Pages }}
     {{ if and (.IsPage) (.Params.date) }}
         <item>
         <title>{{ .Title }}</title>
@@ -26,4 +26,4 @@
     {{ end }}
     {{ end }}
   </channel>
-</rss> 
+</rss>

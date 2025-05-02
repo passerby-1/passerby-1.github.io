@@ -22,30 +22,32 @@
             </span>
         </a>
         {{ end }}
-        {{ if and (.Paginator) (not (.Data.Terms)) }}
-        {{ if gt .Paginator.TotalPages 1 }}
-            <div class="pagination-indicator">
-                <span style="text-align: center">
-                    {{.Paginator.PageNumber}}<br><div style="display: inline-block; transform: rotate(-28deg)">-</div><br>{{.Paginator.TotalPages}}
-                </span>
-            </div>
-            
-            {{ if .Paginator.HasPrev }}
-            <a class="pagination-action" href="{{.Paginator.Prev.URL}}">
-                <i class="material-icons pagination-action-icon">
-                    chevron_left
-                </i>
-            </a>
-            {{ end }}
+        {{ if .IsNode }}
+            {{ if and (.Paginator) (not (.Data.Terms)) }}
+            {{ if gt .Paginator.TotalPages 1 }}
+                <div class="pagination-indicator">
+                    <span style="text-align: center">
+                        {{.Paginator.PageNumber}}<br><div style="display: inline-block; transform: rotate(-28deg)">-</div><br>{{.Paginator.TotalPages}}
+                    </span>
+                </div>
+                
+                {{ if .Paginator.HasPrev }}
+                <a class="pagination-action" href="{{.Paginator.Prev.URL}}">
+                    <i class="material-icons pagination-action-icon">
+                        chevron_left
+                    </i>
+                </a>
+                {{ end }}
 
-            {{ if .Paginator.HasNext }}
-            <a class="pagination-action" href="{{.Paginator.Next.URL}}">
-                <i class="material-icons pagination-action-icon">
-                    chevron_right
-                </i>
-            </a>
+                {{ if .Paginator.HasNext }}
+                <a class="pagination-action" href="{{.Paginator.Next.URL}}">
+                    <i class="material-icons pagination-action-icon">
+                        chevron_right
+                    </i>
+                </a>
+                {{ end }}
             {{ end }}
-        {{ end }}
+            {{ end }}
         {{ end }}
     </div>
 </div>
